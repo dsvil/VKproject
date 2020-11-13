@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-Ep-sBs">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqO-iT-kAa">
                                         <rect key="frame" x="174" y="83" width="66.5" height="33.5"/>
@@ -30,7 +30,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HmJ-kU-1Pg">
+                                    <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HmJ-kU-1Pg">
                                         <rect key="frame" x="50" y="307" width="314" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -46,16 +46,15 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="lwd-l9-KKP" firstAttribute="top" secondItem="1yP-Ep-sBs" secondAttribute="top" constant="200" id="3WO-pN-SX3"/>
-                                    <constraint firstItem="HmJ-kU-1Pg" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="5bF-QX-vFk"/>
                                     <constraint firstItem="HmJ-kU-1Pg" firstAttribute="top" secondItem="lwd-l9-KKP" secondAttribute="bottom" constant="73" id="65y-Hw-WhG"/>
-                                    <constraint firstItem="HmJ-kU-1Pg" firstAttribute="leading" secondItem="1yP-Ep-sBs" secondAttribute="leading" constant="50" id="KhH-ij-WwD"/>
                                     <constraint firstAttribute="bottom" secondItem="OoW-70-A4T" secondAttribute="bottom" constant="100" id="Ly2-wm-Gvn"/>
                                     <constraint firstItem="OoW-70-A4T" firstAttribute="top" secondItem="HmJ-kU-1Pg" secondAttribute="bottom" constant="100" id="QQB-xO-eOk"/>
                                     <constraint firstItem="lwd-l9-KKP" firstAttribute="leading" secondItem="1yP-Ep-sBs" secondAttribute="leading" constant="50" id="Vmn-oY-XKn"/>
                                     <constraint firstItem="kqO-iT-kAa" firstAttribute="top" secondItem="1yP-Ep-sBs" secondAttribute="top" constant="83" id="WhL-Gi-GUF"/>
-                                    <constraint firstAttribute="trailing" secondItem="lwd-l9-KKP" secondAttribute="trailing" constant="50" id="Yxy-XA-pcI"/>
-                                    <constraint firstAttribute="trailing" secondItem="HmJ-kU-1Pg" secondAttribute="trailing" constant="50" id="ccY-go-Uqp"/>
-                                    <constraint firstItem="lwd-l9-KKP" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="lJH-CM-Tg1"/>
+                                    <constraint firstItem="HmJ-kU-1Pg" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="dvl-rE-NRY"/>
+                                    <constraint firstItem="HmJ-kU-1Pg" firstAttribute="leading" secondItem="1yP-Ep-sBs" secondAttribute="leading" constant="50" id="f73-aK-e9c"/>
+                                    <constraint firstItem="lwd-l9-KKP" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="hq0-PZ-sGR"/>
+                                    <constraint firstAttribute="trailing" secondItem="HmJ-kU-1Pg" secondAttribute="trailing" constant="50" id="iO3-kW-MlD"/>
                                     <constraint firstItem="kqO-iT-kAa" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="rCq-cN-7V0"/>
                                     <constraint firstItem="OoW-70-A4T" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="wEO-jF-9Ll"/>
                                 </constraints>
@@ -66,7 +65,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1yP-Ep-sBs" secondAttribute="trailing" id="Ljp-Bq-cd9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1yP-Ep-sBs" secondAttribute="bottom" id="Wmz-yF-aFQ"/>
+                            <constraint firstAttribute="bottom" secondItem="1yP-Ep-sBs" secondAttribute="bottom" id="Wmz-yF-aFQ"/>
                             <constraint firstItem="1yP-Ep-sBs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ui7-OP-Po9"/>
                             <constraint firstItem="1yP-Ep-sBs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uis-sp-ySt"/>
                         </constraints>
