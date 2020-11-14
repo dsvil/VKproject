@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		289B1DA2255ECBC10086815B /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B1DA1255ECBC10086815B /* Gradient.swift */; };
 		28C4BA4C255D5A5E0036DF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4BA4B255D5A5E0036DF6B /* AppDelegate.swift */; };
 		28C4BA4E255D5A5E0036DF6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4BA4D255D5A5E0036DF6B /* SceneDelegate.swift */; };
 		28C4BA50255D5A5E0036DF6B /* LogInScrollViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4BA4F255D5A5E0036DF6B /* LogInScrollViewVC.swift */; };
 		28C4BA53255D5A5E0036DF6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C4BA51255D5A5E0036DF6B /* Main.storyboard */; };
 		28C4BA55255D5A600036DF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C4BA54255D5A600036DF6B /* Assets.xcassets */; };
 		28C4BA58255D5A600036DF6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C4BA56255D5A600036DF6B /* LaunchScreen.storyboard */; };
+		28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAEB45255FA88300396CB7 /* Singlton.swift */; };
+		28F00BE9255F94D1009C7416 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F00BE8255F94D1009C7416 /* RegistrationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289B1DA1255ECBC10086815B /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		28C4BA48255D5A5E0036DF6B /* vk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C4BA4B255D5A5E0036DF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C4BA4D255D5A5E0036DF6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		28C4BA54255D5A600036DF6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28C4BA57255D5A600036DF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28C4BA59255D5A600036DF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28EAEB45255FA88300396CB7 /* Singlton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singlton.swift; sourceTree = "<group>"; };
+		28F00BE8255F94D1009C7416 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		289B1DA0255ECB7E0086815B /* OtherClasses */ = {
+			isa = PBXGroup;
+			children = (
+				289B1DA1255ECBC10086815B /* Gradient.swift */,
+				28EAEB45255FA88300396CB7 /* Singlton.swift */,
+			);
+			path = OtherClasses;
+			sourceTree = "<group>";
+		};
 		28C4BA3F255D5A5E0036DF6B = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +71,7 @@
 		28C4BA4A255D5A5E0036DF6B /* vk */ = {
 			isa = PBXGroup;
 			children = (
+				289B1DA0255ECB7E0086815B /* OtherClasses */,
 				28C4BA66255E19E20036DF6B /* VeiwControllers */,
 				28C4BA64255E19C90036DF6B /* Delegates */,
 				28C4BA51255D5A5E0036DF6B /* Main.storyboard */,
@@ -79,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				28C4BA4F255D5A5E0036DF6B /* LogInScrollViewVC.swift */,
+				28F00BE8255F94D1009C7416 /* RegistrationVC.swift */,
 			);
 			path = VeiwControllers;
 			sourceTree = "<group>";
@@ -156,6 +173,9 @@
 				28C4BA50255D5A5E0036DF6B /* LogInScrollViewVC.swift in Sources */,
 				28C4BA4C255D5A5E0036DF6B /* AppDelegate.swift in Sources */,
 				28C4BA4E255D5A5E0036DF6B /* SceneDelegate.swift in Sources */,
+				28F00BE9255F94D1009C7416 /* RegistrationVC.swift in Sources */,
+				289B1DA2255ECBC10086815B /* Gradient.swift in Sources */,
+				28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
