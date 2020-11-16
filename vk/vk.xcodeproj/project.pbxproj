@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2848D6622560B69500CB8904 /* FriendsListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6612560B69500CB8904 /* FriendsListTVC.swift */; };
+		2848D6652560B9D600CB8904 /* GroupsListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6642560B9D600CB8904 /* GroupsListTVC.swift */; };
+		2848D6682560BA2500CB8904 /* GroupsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6672560BA2500CB8904 /* GroupsListCell.swift */; };
+		2848D66B2560BC5F00CB8904 /* GroupsSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D66A2560BC5F00CB8904 /* GroupsSelectionCell.swift */; };
+		2848D66E2560BC8700CB8904 /* GroupsSelectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D66D2560BC8700CB8904 /* GroupsSelectionTVC.swift */; };
+		2848D6712560C0BE00CB8904 /* TestVCwithTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6702560C0BE00CB8904 /* TestVCwithTable.swift */; };
+		2848D6742560C22600CB8904 /* TestCellForVC&T.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6732560C22600CB8904 /* TestCellForVC&T.swift */; };
+		2848D67A2561401800CB8904 /* GetFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6792561401800CB8904 /* GetFriends.swift */; };
+		2848D67E2561407A00CB8904 /* GetGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D67D2561407A00CB8904 /* GetGroups.swift */; };
+		2848D68125624FE700CB8904 /* FriendsPhotosCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D68025624FE700CB8904 /* FriendsPhotosCCell.swift */; };
+		2848D6842562501800CB8904 /* FriendsPhotosCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */; };
 		289B1DA2255ECBC10086815B /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B1DA1255ECBC10086815B /* Gradient.swift */; };
 		28C4BA4C255D5A5E0036DF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4BA4B255D5A5E0036DF6B /* AppDelegate.swift */; };
 		28C4BA4E255D5A5E0036DF6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C4BA4D255D5A5E0036DF6B /* SceneDelegate.swift */; };
@@ -15,10 +26,22 @@
 		28C4BA55255D5A600036DF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C4BA54255D5A600036DF6B /* Assets.xcassets */; };
 		28C4BA58255D5A600036DF6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C4BA56255D5A600036DF6B /* LaunchScreen.storyboard */; };
 		28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAEB45255FA88300396CB7 /* Singlton.swift */; };
+		28EAEB4B2560B33B00396CB7 /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */; };
 		28F00BE9255F94D1009C7416 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F00BE8255F94D1009C7416 /* RegistrationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2848D6612560B69500CB8904 /* FriendsListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListTVC.swift; sourceTree = "<group>"; };
+		2848D6642560B9D600CB8904 /* GroupsListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsListTVC.swift; sourceTree = "<group>"; };
+		2848D6672560BA2500CB8904 /* GroupsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsListCell.swift; sourceTree = "<group>"; };
+		2848D66A2560BC5F00CB8904 /* GroupsSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSelectionCell.swift; sourceTree = "<group>"; };
+		2848D66D2560BC8700CB8904 /* GroupsSelectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSelectionTVC.swift; sourceTree = "<group>"; };
+		2848D6702560C0BE00CB8904 /* TestVCwithTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCwithTable.swift; sourceTree = "<group>"; };
+		2848D6732560C22600CB8904 /* TestCellForVC&T.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestCellForVC&T.swift"; sourceTree = "<group>"; };
+		2848D6792561401800CB8904 /* GetFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriends.swift; sourceTree = "<group>"; };
+		2848D67D2561407A00CB8904 /* GetGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroups.swift; sourceTree = "<group>"; };
+		2848D68025624FE700CB8904 /* FriendsPhotosCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotosCCell.swift; sourceTree = "<group>"; };
+		2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotosCVC.swift; sourceTree = "<group>"; };
 		289B1DA1255ECBC10086815B /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		28C4BA48255D5A5E0036DF6B /* vk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C4BA4B255D5A5E0036DF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +52,7 @@
 		28C4BA57255D5A600036DF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28C4BA59255D5A600036DF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28EAEB45255FA88300396CB7 /* Singlton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singlton.swift; sourceTree = "<group>"; };
+		28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
 		28F00BE8255F94D1009C7416 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,11 +67,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2848D6762560CD5300CB8904 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				2848D6732560C22600CB8904 /* TestCellForVC&T.swift */,
+				2848D6702560C0BE00CB8904 /* TestVCwithTable.swift */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
+		2848D67825613FC300CB8904 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				28EAEB45255FA88300396CB7 /* Singlton.swift */,
+				2848D6792561401800CB8904 /* GetFriends.swift */,
+				2848D67D2561407A00CB8904 /* GetGroups.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
 		289B1DA0255ECB7E0086815B /* OtherClasses */ = {
 			isa = PBXGroup;
 			children = (
 				289B1DA1255ECBC10086815B /* Gradient.swift */,
-				28EAEB45255FA88300396CB7 /* Singlton.swift */,
 			);
 			path = OtherClasses;
 			sourceTree = "<group>";
@@ -71,9 +113,12 @@
 		28C4BA4A255D5A5E0036DF6B /* vk */ = {
 			isa = PBXGroup;
 			children = (
+				28C4BA64255E19C90036DF6B /* Delegates */,
+				2848D6762560CD5300CB8904 /* Playground */,
+				2848D67825613FC300CB8904 /* DataSources */,
+				28EAEB492560B2F500396CB7 /* Cells */,
 				289B1DA0255ECB7E0086815B /* OtherClasses */,
 				28C4BA66255E19E20036DF6B /* VeiwControllers */,
-				28C4BA64255E19C90036DF6B /* Delegates */,
 				28C4BA51255D5A5E0036DF6B /* Main.storyboard */,
 				28C4BA54255D5A600036DF6B /* Assets.xcassets */,
 				28C4BA56255D5A600036DF6B /* LaunchScreen.storyboard */,
@@ -96,8 +141,23 @@
 			children = (
 				28C4BA4F255D5A5E0036DF6B /* LogInScrollViewVC.swift */,
 				28F00BE8255F94D1009C7416 /* RegistrationVC.swift */,
+				2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */,
+				2848D66D2560BC8700CB8904 /* GroupsSelectionTVC.swift */,
+				2848D6642560B9D600CB8904 /* GroupsListTVC.swift */,
+				2848D6612560B69500CB8904 /* FriendsListTVC.swift */,
 			);
 			path = VeiwControllers;
+			sourceTree = "<group>";
+		};
+		28EAEB492560B2F500396CB7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */,
+				2848D66A2560BC5F00CB8904 /* GroupsSelectionCell.swift */,
+				2848D68025624FE700CB8904 /* FriendsPhotosCCell.swift */,
+				2848D6672560BA2500CB8904 /* GroupsListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,11 +230,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2848D6652560B9D600CB8904 /* GroupsListTVC.swift in Sources */,
 				28C4BA50255D5A5E0036DF6B /* LogInScrollViewVC.swift in Sources */,
 				28C4BA4C255D5A5E0036DF6B /* AppDelegate.swift in Sources */,
 				28C4BA4E255D5A5E0036DF6B /* SceneDelegate.swift in Sources */,
+				2848D67A2561401800CB8904 /* GetFriends.swift in Sources */,
+				2848D6622560B69500CB8904 /* FriendsListTVC.swift in Sources */,
+				2848D6682560BA2500CB8904 /* GroupsListCell.swift in Sources */,
+				2848D66E2560BC8700CB8904 /* GroupsSelectionTVC.swift in Sources */,
 				28F00BE9255F94D1009C7416 /* RegistrationVC.swift in Sources */,
+				2848D6712560C0BE00CB8904 /* TestVCwithTable.swift in Sources */,
+				2848D67E2561407A00CB8904 /* GetGroups.swift in Sources */,
 				289B1DA2255ECBC10086815B /* Gradient.swift in Sources */,
+				2848D66B2560BC5F00CB8904 /* GroupsSelectionCell.swift in Sources */,
+				2848D6842562501800CB8904 /* FriendsPhotosCVC.swift in Sources */,
+				28EAEB4B2560B33B00396CB7 /* FriendsListCell.swift in Sources */,
+				2848D6742560C22600CB8904 /* TestCellForVC&T.swift in Sources */,
+				2848D68125624FE700CB8904 /* FriendsPhotosCCell.swift in Sources */,
 				28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

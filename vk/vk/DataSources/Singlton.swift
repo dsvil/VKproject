@@ -14,6 +14,6 @@ class UserData {
         self.logIn = logIn
         self.pwd = pwd
     }
-    static let instance = UserData(logIn: "1", pwd: "1")
+    static let instance = UserData(logIn: "", pwd: "")
 }
 

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pageTitle.text = "Vkontakte"
-
+        
         
         NotificationCenter.default.addObserver(
             self,

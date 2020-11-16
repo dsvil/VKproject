@@ -8,7 +8,7 @@
 import UIKit
 
 class RegistrationVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +23,7 @@ class RegistrationVC: UIViewController {
             selector: #selector(keyboardWillBeHidden(notification:)),
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
-
+        
     }
     
     @IBOutlet weak var scrollBottom: NSLayoutConstraint!
@@ -39,7 +39,7 @@ class RegistrationVC: UIViewController {
     @IBAction func tapScreen(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-
+    
     @IBOutlet weak var logInText: UITextField!
     @IBOutlet weak var firstPwdText: UITextField!
     @IBOutlet weak var secondPwdText: UITextField!
@@ -58,7 +58,7 @@ class RegistrationVC: UIViewController {
             }
             return false
         default:
-            return false
+            return true
         }
     }
     func checkCount() -> Bool {
