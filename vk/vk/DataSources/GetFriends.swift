@@ -11,6 +11,9 @@ struct User {
     let fio: String
     let icon: UIImage
     let image: [UIImage]
+    var titleFirstLetter: String {
+        return String(fio[fio.startIndex])
+    }
 }
 
 final class GetFriends {

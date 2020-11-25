@@ -9,8 +9,8 @@ import UIKit
 
 class TestVCwithTable: UIViewController, UITableViewDataSource {
     let users: [String] = ["Ivan", "Peter", "Ilya", "Sergei"]
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return users.count
     }
     
@@ -19,13 +19,8 @@ class TestVCwithTable: UIViewController, UITableViewDataSource {
         //        cell.labelInTestCell.text = "\(indexPath.row)"
         //        cell.labelInTestCell.textColor = UIColor.blue
         cell.labelInTestCell.text = users[indexPath.row]
-        // Configure the cell...
-        
         return cell
     }
-    
-    
-    
     
     @IBOutlet weak var testTableView: UITableView!
     override func viewDidLoad() {
