@@ -47,10 +47,14 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
         }
     }
     
+    let avatarView = AvatarView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createSections()
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.titleView = avatarView
+        
     }
     
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {

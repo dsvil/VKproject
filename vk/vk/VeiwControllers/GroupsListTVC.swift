@@ -65,9 +65,10 @@ class GroupsListTVC: UITableViewController, UISearchBarDelegate {
             if let groupsSelectionTVC = unwindSegue.source as? GroupsSelectionTVC {
                 if let indexPath = groupsSelectionTVC.tableView.indexPathForSelectedRow {
                     let group = groupsSelectionTVC.selectedGroups[indexPath.row]
-                    if  !myGroups.contains(where: {myGroups -> Bool in
-                                            return group.name == myGroups.name}) {
-                        myGroups.append(group)
+                    if  !filteredGroups.contains(where: { filteredGroups -> Bool in
+                                            return group.name ==  filteredGroups.name}) {
+                        filteredGroups.append(group)
+                        myGroups = filteredGroups
                         tableView.reloadData()
                     }
                 }

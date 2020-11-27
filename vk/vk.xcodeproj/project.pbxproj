@@ -30,6 +30,10 @@
 		28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAEB45255FA88300396CB7 /* Singlton.swift */; };
 		28EAEB4B2560B33B00396CB7 /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */; };
 		28F00BE9255F94D1009C7416 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F00BE8255F94D1009C7416 /* RegistrationVC.swift */; };
+		A19DB302256FDE86007FCEB9 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB300256FDE86007FCEB9 /* NewsCell.swift */; };
+		A19DB303256FDE86007FCEB9 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19DB301256FDE86007FCEB9 /* NewsCell.xib */; };
+		A19DB306256FE528007FCEB9 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB305256FE528007FCEB9 /* AvatarView.swift */; };
+		A19DB3092570683F007FCEB9 /* SetUpBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB3082570683F007FCEB9 /* SetUpBars.swift */; };
 		A1C2E75A256E2E8600F044C6 /* CircleShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2E759256E2E8600F044C6 /* CircleShadow.swift */; };
 		A1C2E75F256E79FE00F044C6 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2E75E256E79FE00F044C6 /* LikeControl.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +64,10 @@
 		28EAEB45255FA88300396CB7 /* Singlton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singlton.swift; sourceTree = "<group>"; };
 		28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
 		28F00BE8255F94D1009C7416 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		A19DB300256FDE86007FCEB9 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		A19DB301256FDE86007FCEB9 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		A19DB305256FE528007FCEB9 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		A19DB3082570683F007FCEB9 /* SetUpBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpBars.swift; sourceTree = "<group>"; };
 		A1C2E759256E2E8600F044C6 /* CircleShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadow.swift; sourceTree = "<group>"; };
 		A1C2E75E256E79FE00F044C6 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				28D62A2F2563FBF600ACF9B5 /* Gradient.swift */,
+				A19DB3082570683F007FCEB9 /* SetUpBars.swift */,
+				A19DB305256FE528007FCEB9 /* AvatarView.swift */,
 				A1C2E75E256E79FE00F044C6 /* LikeControl.swift */,
 				A1C2E759256E2E8600F044C6 /* CircleShadow.swift */,
 			);
@@ -165,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */,
+				A19DB300256FDE86007FCEB9 /* NewsCell.swift */,
+				A19DB301256FDE86007FCEB9 /* NewsCell.xib */,
 				2848D66A2560BC5F00CB8904 /* GroupsSelectionCell.swift */,
 				2848D68025624FE700CB8904 /* FriendsPhotosCCell.swift */,
 				2848D6672560BA2500CB8904 /* GroupsListCell.swift */,
@@ -231,6 +243,7 @@
 			files = (
 				28C4BA58255D5A600036DF6B /* LaunchScreen.storyboard in Resources */,
 				28C4BA55255D5A600036DF6B /* Assets.xcassets in Resources */,
+				A19DB303256FDE86007FCEB9 /* NewsCell.xib in Resources */,
 				28C4BA53255D5A5E0036DF6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,7 +258,9 @@
 				2848D6652560B9D600CB8904 /* GroupsListTVC.swift in Sources */,
 				28C4BA50255D5A5E0036DF6B /* LogInScrollViewVC.swift in Sources */,
 				28C4BA4C255D5A5E0036DF6B /* AppDelegate.swift in Sources */,
+				A19DB3092570683F007FCEB9 /* SetUpBars.swift in Sources */,
 				28C4BA4E255D5A5E0036DF6B /* SceneDelegate.swift in Sources */,
+				A19DB302256FDE86007FCEB9 /* NewsCell.swift in Sources */,
 				2848D67A2561401800CB8904 /* GetFriends.swift in Sources */,
 				2848D6622560B69500CB8904 /* FriendsListTVC.swift in Sources */,
 				2848D6682560BA2500CB8904 /* GroupsListCell.swift in Sources */,
@@ -254,6 +269,7 @@
 				28F00BE9255F94D1009C7416 /* RegistrationVC.swift in Sources */,
 				2848D6712560C0BE00CB8904 /* TestVCwithTable.swift in Sources */,
 				2848D67E2561407A00CB8904 /* GetGroups.swift in Sources */,
+				A19DB306256FE528007FCEB9 /* AvatarView.swift in Sources */,
 				289B1DA2255ECBC10086815B /* TestDraw.swift in Sources */,
 				28D2B8CB25635B4000F443C5 /* TestGuessNumVC.swift in Sources */,
 				A1C2E75A256E2E8600F044C6 /* CircleShadow.swift in Sources */,

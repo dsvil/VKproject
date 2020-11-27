@@ -49,8 +49,8 @@ class RegistrationVC: UIViewController {
         case "Continue":
             let check1 = checkCount()
             let check2 = checkPwd()
-            if !check1 {alertCount()}
-            if !check2 {alertPwd()}
+            if !check1 {alert("Слишком короткое имя пользователя, введите другое")}
+            if !check2 {alert("Пароли не совпадают")}
             if check1 && check2 {
                 UserData.instance.logIn = logInText.text!
                 UserData.instance.pwd = firstPwdText.text!
@@ -71,10 +71,10 @@ class RegistrationVC: UIViewController {
         return pwd1 == pwd2
     }
     
-    func alertCount() {
+    func alert(_ massage: String) {
         let alter = UIAlertController(
             title: "Ошибка",
-            message: "Слишком короткое имя пользователя, введите другое",
+            message: massage,
             preferredStyle: .alert)
         let action = UIAlertAction(
             title: "WTF?!",
@@ -83,17 +83,4 @@ class RegistrationVC: UIViewController {
         alter.addAction(action)
         present(alter, animated: true, completion: nil)
     }
-    func alertPwd() {
-        let alter = UIAlertController(
-            title: "Ошибка",
-            message: "Пароли не совпадают",
-            preferredStyle: .alert)
-        let action = UIAlertAction(
-            title: "WTF?!",
-            style: .cancel,
-            handler: nil)
-        alter.addAction(action)
-        present(alter, animated: true, completion: nil)
-    }
-    
 }

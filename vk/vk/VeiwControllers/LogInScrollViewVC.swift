@@ -34,15 +34,7 @@ class ViewController: UIViewController {
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
         
-        let navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.tintColor = UIColor.white
-        navigationBarAppearance.barTintColor = UIColor.black
-        
-        let searchField = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-        searchField.backgroundColor = UIColor.black
-        searchField.textColor = UIColor.white
-            
-        
+        setUpNavTabBars()
     }
     
     @IBAction func tapScreen(_ sender: UITapGestureRecognizer) {
