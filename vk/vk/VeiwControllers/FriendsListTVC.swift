@@ -95,8 +95,6 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
             
         }
     }
-    
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OpenImages" {
             if let destination = segue.destination as? FriendsPhotosCVC{

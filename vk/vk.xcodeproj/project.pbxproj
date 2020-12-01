@@ -33,8 +33,9 @@
 		A148B36C2570A59D0046DE8E /* CVLayoutFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B36B2570A59D0046DE8E /* CVLayoutFlow.swift */; };
 		A148B36F2570A5D80046DE8E /* WeatherControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B36E2570A5D80046DE8E /* WeatherControl.swift */; };
 		A153DE6E2571E66C00D469E0 /* NewsControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153DE6D2571E66C00D469E0 /* NewsControls.swift */; };
+		A17730912575F9FB00EA71DC /* NewsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177308F2575F9FB00EA71DC /* NewsCVCell.swift */; };
+		A177309725760F2D00EA71DC /* NewsCVCCFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177309625760F2D00EA71DC /* NewsCVCCFlowLayout.swift */; };
 		A19DB302256FDE86007FCEB9 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB300256FDE86007FCEB9 /* NewsCell.swift */; };
-		A19DB303256FDE86007FCEB9 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19DB301256FDE86007FCEB9 /* NewsCell.xib */; };
 		A19DB306256FE528007FCEB9 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB305256FE528007FCEB9 /* AvatarView.swift */; };
 		A19DB3092570683F007FCEB9 /* SetUpBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB3082570683F007FCEB9 /* SetUpBars.swift */; };
 		A1B5A5A9257104C500419142 /* NewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5A5A8257104C500419142 /* NewsTVC.swift */; };
@@ -72,8 +73,9 @@
 		A148B36B2570A59D0046DE8E /* CVLayoutFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVLayoutFlow.swift; sourceTree = "<group>"; };
 		A148B36E2570A5D80046DE8E /* WeatherControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherControl.swift; sourceTree = "<group>"; };
 		A153DE6D2571E66C00D469E0 /* NewsControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsControls.swift; sourceTree = "<group>"; };
+		A177308F2575F9FB00EA71DC /* NewsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCVCell.swift; sourceTree = "<group>"; };
+		A177309625760F2D00EA71DC /* NewsCVCCFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCVCCFlowLayout.swift; sourceTree = "<group>"; };
 		A19DB300256FDE86007FCEB9 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
-		A19DB301256FDE86007FCEB9 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		A19DB305256FE528007FCEB9 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		A19DB3082570683F007FCEB9 /* SetUpBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpBars.swift; sourceTree = "<group>"; };
 		A1B5A5A8257104C500419142 /* NewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTVC.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				28D62A2F2563FBF600ACF9B5 /* Gradient.swift */,
 				A19DB3082570683F007FCEB9 /* SetUpBars.swift */,
+				A177309625760F2D00EA71DC /* NewsCVCCFlowLayout.swift */,
 				A19DB305256FE528007FCEB9 /* AvatarView.swift */,
 				A1C2E75E256E79FE00F044C6 /* LikeControl.swift */,
 				A153DE6D2571E66C00D469E0 /* NewsControls.swift */,
@@ -190,7 +193,7 @@
 			children = (
 				28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */,
 				A19DB300256FDE86007FCEB9 /* NewsCell.swift */,
-				A19DB301256FDE86007FCEB9 /* NewsCell.xib */,
+				A177308F2575F9FB00EA71DC /* NewsCVCell.swift */,
 				2848D66A2560BC5F00CB8904 /* GroupsSelectionCell.swift */,
 				2848D68025624FE700CB8904 /* FriendsPhotosCCell.swift */,
 				2848D6672560BA2500CB8904 /* GroupsListCell.swift */,
@@ -266,7 +269,6 @@
 			files = (
 				28C4BA58255D5A600036DF6B /* LaunchScreen.storyboard in Resources */,
 				28C4BA55255D5A600036DF6B /* Assets.xcassets in Resources */,
-				A19DB303256FDE86007FCEB9 /* NewsCell.xib in Resources */,
 				28C4BA53255D5A5E0036DF6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +285,7 @@
 				28C4BA4C255D5A5E0036DF6B /* AppDelegate.swift in Sources */,
 				A148B36F2570A5D80046DE8E /* WeatherControl.swift in Sources */,
 				A19DB3092570683F007FCEB9 /* SetUpBars.swift in Sources */,
+				A177309725760F2D00EA71DC /* NewsCVCCFlowLayout.swift in Sources */,
 				28C4BA4E255D5A5E0036DF6B /* SceneDelegate.swift in Sources */,
 				A1B5A5AC257108EC00419142 /* GetNews.swift in Sources */,
 				A19DB302256FDE86007FCEB9 /* NewsCell.swift in Sources */,
@@ -306,6 +309,7 @@
 				28EAEB4B2560B33B00396CB7 /* FriendsListCell.swift in Sources */,
 				2848D6742560C22600CB8904 /* TestCellForVC&T.swift in Sources */,
 				2848D68125624FE700CB8904 /* FriendsPhotosCCell.swift in Sources */,
+				A17730912575F9FB00EA71DC /* NewsCVCell.swift in Sources */,
 				A153DE6E2571E66C00D469E0 /* NewsControls.swift in Sources */,
 				28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */,
 			);

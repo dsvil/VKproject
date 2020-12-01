@@ -7,18 +7,19 @@
 
 import UIKit
 
-class NewsCell: UITableViewCell {
+class NewsCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var avatarView: UIView!
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var status: UILabel!
-    @IBOutlet weak var mainImage: UIImageView!
+    
     @IBOutlet weak var likes: NewsControls!
     @IBOutlet weak var comment: NewsControls!
     @IBOutlet weak var eye: NewsControls!
     @IBOutlet weak var forward: NewsControls!
 
+    @IBOutlet weak var imageCollection: UICollectionView!
     
     @IBAction func likesPressed(_ sender: Any) {
         likes.likes()
@@ -46,9 +47,32 @@ class NewsCell: UITableViewCell {
     @IBAction func forwardPressed(_ sender: Any) {
         forward.animateAuthButton()
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        imageCollection.dataSource = self
+        imageCollection.delegate = self
+        imageCollection.reloadData()
+    }
+    var mainImage = [UIImage]()
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return mainImage.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCVCell", for: indexPath) as! NewsCVCell
+        cell.mainImage.image = mainImage[indexPath.row]
+        return cell
+    }
+}
+extension NewsCell : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        let width = collectionView.frame.width / 2
+        return CGSize(width: width, height: width)
+    }
 }
