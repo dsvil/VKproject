@@ -92,8 +92,11 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
             friends.remove(at: indexPath.row)
             createSections()
             tableView.reloadData()
+            
         }
     }
+    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OpenImages" {
             if let destination = segue.destination as? FriendsPhotosCVC{

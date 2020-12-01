@@ -14,4 +14,8 @@ class FriendsPhotosCCell: UICollectionViewCell {
         super.awakeFromNib()
         layer.cornerRadius = 25
     }
+    override func layoutSubviews() {
+        super .layoutSubviews()
+        friendImage.layer.cornerRadius = 25
+    }
 }
