@@ -47,6 +47,17 @@ final class CircleView: UIView {
         super.layoutSubviews()
         
     }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0.8
+        animation.toValue = 1
+        animation.stiffness = 200
+        animation.mass = 2
+        animation.duration = 1
+        animation.beginTime = CACurrentMediaTime()
+        animation.fillMode = CAMediaTimingFillMode.backwards
+        self.layer.add(animation, forKey: nil)
+    }
 }
 @IBDesignable
 final class CircleImage : UIImageView {

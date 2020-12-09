@@ -14,8 +14,8 @@ final class LikeControl: UIControl {
     override func awakeFromNib() {
         super.awakeFromNib()
         count.textColor = .lightGray
-        count.text = " "
-        count.alpha = 0.5
+        count.text = "0"
+        count.alpha = 1
         likeHeart.image = UIImage(systemName: "heart")
         likeHeart.tintColor = .lightGray
         likeHeart.alpha = 0.5
@@ -36,7 +36,7 @@ final class LikeControl: UIControl {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if count.text == " " {
+        if count.text == "0" {
             count.text = "1"
             likeHeart.image = UIImage(systemName: "heart.fill")
             count.textColor = .red
@@ -44,11 +44,11 @@ final class LikeControl: UIControl {
             count.alpha = 1
             likeHeart.alpha = 1
         } else {
-            count.text = " "
+            count.text = "0"
             likeHeart.image = UIImage(systemName: "heart")
             count.textColor = .lightGray
             likeHeart.tintColor = .lightGray
-            count.alpha = 0.5
+            count.alpha = 1
             likeHeart.alpha = 0.5
         }
     }
@@ -62,6 +62,13 @@ final class LikeControl: UIControl {
         animation.beginTime = CACurrentMediaTime()
         animation.fillMode = CAMediaTimingFillMode.backwards
         self.likeHeart.layer.add(animation, forKey: nil)
-        self.count.layer.add(animation, forKey: nil)
+    
+        self.count.transform = CGAffineTransform(rotationAngle: 180)
+        UIView.transition(with: self.count,
+                          duration: 1,
+                          options: .transitionFlipFromTop,
+                          animations: {
+                            self.count.transform = .identity
+                          })
     }
 }

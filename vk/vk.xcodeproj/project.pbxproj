@@ -30,9 +30,11 @@
 		28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAEB45255FA88300396CB7 /* Singlton.swift */; };
 		28EAEB4B2560B33B00396CB7 /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */; };
 		28F00BE9255F94D1009C7416 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F00BE8255F94D1009C7416 /* RegistrationVC.swift */; };
+		A134D8DE2580449200EC6351 /* InitialAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134D8DD2580449200EC6351 /* InitialAnimation.swift */; };
 		A148B36C2570A59D0046DE8E /* CVLayoutFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B36B2570A59D0046DE8E /* CVLayoutFlow.swift */; };
 		A148B36F2570A5D80046DE8E /* WeatherControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B36E2570A5D80046DE8E /* WeatherControl.swift */; };
 		A153DE6E2571E66C00D469E0 /* NewsControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153DE6D2571E66C00D469E0 /* NewsControls.swift */; };
+		A153DF95257E1B2A001DC9BA /* TestAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153DF94257E1B2A001DC9BA /* TestAnimations.swift */; };
 		A17730912575F9FB00EA71DC /* NewsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177308F2575F9FB00EA71DC /* NewsCVCell.swift */; };
 		A177309725760F2D00EA71DC /* NewsCVCCFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177309625760F2D00EA71DC /* NewsCVCCFlowLayout.swift */; };
 		A19DB302256FDE86007FCEB9 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB300256FDE86007FCEB9 /* NewsCell.swift */; };
@@ -70,9 +72,11 @@
 		28EAEB45255FA88300396CB7 /* Singlton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singlton.swift; sourceTree = "<group>"; };
 		28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
 		28F00BE8255F94D1009C7416 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		A134D8DD2580449200EC6351 /* InitialAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAnimation.swift; sourceTree = "<group>"; };
 		A148B36B2570A59D0046DE8E /* CVLayoutFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVLayoutFlow.swift; sourceTree = "<group>"; };
 		A148B36E2570A5D80046DE8E /* WeatherControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherControl.swift; sourceTree = "<group>"; };
 		A153DE6D2571E66C00D469E0 /* NewsControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsControls.swift; sourceTree = "<group>"; };
+		A153DF94257E1B2A001DC9BA /* TestAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAnimations.swift; sourceTree = "<group>"; };
 		A177308F2575F9FB00EA71DC /* NewsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCVCell.swift; sourceTree = "<group>"; };
 		A177309625760F2D00EA71DC /* NewsCVCCFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCVCCFlowLayout.swift; sourceTree = "<group>"; };
 		A19DB300256FDE86007FCEB9 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				2848D6732560C22600CB8904 /* TestCellForVC&T.swift */,
 				28D2B8CA25635B4000F443C5 /* TestGuessNumVC.swift */,
 				2848D6702560C0BE00CB8904 /* TestVCwithTable.swift */,
+				A153DF94257E1B2A001DC9BA /* TestAnimations.swift */,
 				289B1DA1255ECBC10086815B /* TestDraw.swift */,
 				A177308A2574D5A100EA71DC /* Weather */,
 			);
@@ -179,6 +184,7 @@
 			children = (
 				28C4BA4F255D5A5E0036DF6B /* LogInScrollViewVC.swift */,
 				28F00BE8255F94D1009C7416 /* RegistrationVC.swift */,
+				A134D8DD2580449200EC6351 /* InitialAnimation.swift */,
 				2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */,
 				A1B5A5A8257104C500419142 /* NewsTVC.swift */,
 				2848D66D2560BC8700CB8904 /* GroupsSelectionTVC.swift */,
@@ -293,9 +299,11 @@
 				2848D6622560B69500CB8904 /* FriendsListTVC.swift in Sources */,
 				2848D6682560BA2500CB8904 /* GroupsListCell.swift in Sources */,
 				2848D66E2560BC8700CB8904 /* GroupsSelectionTVC.swift in Sources */,
+				A134D8DE2580449200EC6351 /* InitialAnimation.swift in Sources */,
 				A1C2E75F256E79FE00F044C6 /* LikeControl.swift in Sources */,
 				28F00BE9255F94D1009C7416 /* RegistrationVC.swift in Sources */,
 				2848D6712560C0BE00CB8904 /* TestVCwithTable.swift in Sources */,
+				A153DF95257E1B2A001DC9BA /* TestAnimations.swift in Sources */,
 				A1B5A5A9257104C500419142 /* NewsTVC.swift in Sources */,
 				2848D67E2561407A00CB8904 /* GetGroups.swift in Sources */,
 				A19DB306256FE528007FCEB9 /* AvatarView.swift in Sources */,
