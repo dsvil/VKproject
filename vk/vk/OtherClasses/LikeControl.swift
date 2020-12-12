@@ -26,7 +26,7 @@ final class LikeControl: UIControl {
         stack.isUserInteractionEnabled = false
         addSubview(stack)
         stack.translatesAutoresizingMaskIntoConstraints = false
-     
+        
         NSLayoutConstraint.activate([
             stack.topAnchor.constraint(equalTo: topAnchor),
             stack.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -62,7 +62,7 @@ final class LikeControl: UIControl {
         animation.beginTime = CACurrentMediaTime()
         animation.fillMode = CAMediaTimingFillMode.backwards
         self.likeHeart.layer.add(animation, forKey: nil)
-    
+        
         self.count.transform = CGAffineTransform(rotationAngle: 180)
         UIView.transition(with: self.count,
                           duration: 1,

@@ -11,7 +11,7 @@ class GroupsSelectionCell: UITableViewCell {
     
     @IBOutlet weak var groupsSelectionIcon: UIImageView!
     @IBOutlet weak var groupsSelectionLabel: UILabel!
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         setGradientForCells()

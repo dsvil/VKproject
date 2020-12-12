@@ -84,31 +84,20 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsListCell", for: indexPath) as! FriendsListCell
         let friend = filteredSections[indexPath.section][indexPath.row]
         
-        cell.contentView.alpha = 0.5
-
-        UIView.animate(withDuration: 0.5,
-                       delay: 0,
-                       options: .curveEaseInOut,
-                       animations: {
-                        cell.frame.origin.x -= 70
-        },
-                       completion: nil)
+        cell.contentView.alpha = 0
+        cell.contentView.transform = CGAffineTransform(translationX: -50, y: 0)
         
+        UIView.transition(with: cell.contentView,
+                          duration: 0.4,
+                          options: .curveEaseInOut,
+                          animations: {
+                            cell.contentView.transform = .identity
+                            cell.contentView.alpha = 1
+                          })
         cell.friendList.text = friend.fio
         cell.friendIcon.image = friend.icon
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = cell as! FriendsListCell
-        UIView.animate(withDuration: 0.5,
-                       delay: 0,
-                       options: .curveEaseInOut,
-                       animations: {
-                        cell.contentView.alpha = 1
-        })
-    }
-    
+    }    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             friends.remove(at: indexPath.row)

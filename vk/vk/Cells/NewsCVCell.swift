@@ -8,7 +8,7 @@
 import UIKit
 
 class NewsCVCell: UICollectionViewCell {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

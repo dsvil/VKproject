@@ -9,21 +9,21 @@ import UIKit
 
 class NewsViewLayout: UICollectionViewLayout {
     var cacheAttributes = [IndexPath: UICollectionViewLayoutAttributes]()
-
+    
     let viewHeight: CGFloat = 400
     var cellHeight: CGFloat = 400
     private var totalCellsHeight: CGFloat = 400
-
+    
     override func prepare() {
         super.prepare()
-
+        
         cacheAttributes = [:]
         guard let collectionView = self.collectionView else { return }
-
+        
         let itemsCount = collectionView.numberOfItems(inSection: 0)
         guard itemsCount > 0 else { return }
         let dataSourceCell = collectionView.dataSource as! NewsCell
-
+        
         //нужно посчитать каких фото в массиве больше, горизонтальных или вертикальных
         // если число фотографий горизонтальные, то флаг будет true
         let horizontal = dataSourceCell.mainImage.filter({$0.size.height < $0.size.width}).count > dataSourceCell.mainImage.filter({$0.size.height >= $0.size.width}).count
@@ -31,29 +31,29 @@ class NewsViewLayout: UICollectionViewLayout {
         let countOfLinesInView = calculateCountOfLines(for: itemsCount)
         //массив с числом ячеек в каждом столбце/секции
         let countsOfCellsInOneSection = calculateCellCountInLines(for: countOfLinesInView, itemsCount)
-
-
+        
+        
         let cellWidth = collectionView.bounds.width
         var lastY: CGFloat = 0
         var lastX: CGFloat = 0
         var numberOfCurrenSection = 1
         var currentCellInSection = 1
-
+        
         for index in 0..<itemsCount {
             let indexPath = IndexPath(item: index, section: 0)
             let attributtes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             //число ячеек в текущей строке/столбце
             let countOfCellsInCurrentSection : CGFloat = CGFloat(countsOfCellsInOneSection[numberOfCurrenSection-1])
-
+            
             let currentWidth = horizontal ? cellWidth / countOfCellsInCurrentSection : cellWidth / CGFloat(countOfLinesInView)
             let currentHeight = horizontal ? viewHeight / CGFloat(countOfLinesInView) : viewHeight / countOfCellsInCurrentSection
-
+            
             attributtes.frame = CGRect(
                 x: lastX,
                 y: lastY,
                 width: currentWidth,
                 height: currentHeight)
-
+            
             if horizontal {
                 lastX += currentWidth + 1
             } else {
@@ -76,22 +76,22 @@ class NewsViewLayout: UICollectionViewLayout {
             cacheAttributes[indexPath] = attributtes
         }
     }
-
+    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         return cacheAttributes.values.filter { attributes in
             rect.intersects(attributes.frame)
         }
     }
-
+    
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return cacheAttributes[indexPath]
     }
-
+    
     override var collectionViewContentSize: CGSize {
         return CGSize(width: collectionView?.bounds.width ?? 0,
                       height: totalCellsHeight)
     }
-
+    
     func calculateCountOfLines(for count: Int) -> Int{
         switch count {
         case 1:
@@ -104,7 +104,7 @@ class NewsViewLayout: UICollectionViewLayout {
             return 0
         }
     }
-
+    
     func calculateCellCountInLines(for line: Int, _ allCount : Int) -> [Int]{
         var array = [Int]()
         var currentAllCount = allCount

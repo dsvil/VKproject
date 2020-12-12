@@ -8,7 +8,7 @@
 import UIKit
 
 class NewsCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
@@ -18,7 +18,7 @@ class NewsCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDel
     @IBOutlet weak var comment: NewsControls!
     @IBOutlet weak var eye: NewsControls!
     @IBOutlet weak var forward: NewsControls!
-
+    
     @IBOutlet weak var imageCollection: UICollectionView!
     
     @IBAction func likesPressed(_ sender: Any) {
@@ -47,7 +47,7 @@ class NewsCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDel
     @IBAction func forwardPressed(_ sender: Any) {
         forward.animateAuthButton()
     }
-
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()

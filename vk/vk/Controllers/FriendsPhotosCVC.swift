@@ -25,7 +25,16 @@ class FriendsPhotosCVC: UICollectionViewController {
         cell.friendImage.image = friendsImage.image[indexPath.row]
         return cell
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "OpenImage" {
+            if let destination = segue.destination as? FullScreenImageController {
+                let indexPath = collectionView.indexPathsForSelectedItems!.first!
+                destination.startFromImage = indexPath.row
+                destination.friendImages = friendsImage.image
+                
+            }
+        }
+    }
 }
 
 

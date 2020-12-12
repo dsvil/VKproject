@@ -9,12 +9,12 @@ import UIKit
 
 enum Day: Int {
     case monday,
-    tuesday,
-    wednesday,
-    thursday,
-    friday,
-    saturday,
-    sunday
+         tuesday,
+         wednesday,
+         thursday,
+         friday,
+         saturday,
+         sunday
     
     static let allDays: [Day] = [monday, tuesday, wednesday, thursday, friday, saturday, sunday]
     
@@ -44,14 +44,14 @@ enum Day: Int {
     
     private func setupView() {
         for day in Day.allDays{
-        let button = UIButton(type: .system)
-        button.setTitle(day.title, for: .normal)
-        button.setTitleColor(.lightGray, for: .normal)
-        button.setTitleColor(.lightGray, for: .selected)
-        button.addTarget(self, action: #selector(selectDay(_:)), for: .touchUpOutside)
-        self.buttons.append(button)
+            let button = UIButton(type: .system)
+            button.setTitle(day.title, for: .normal)
+            button.setTitleColor(.lightGray, for: .normal)
+            button.setTitleColor(.lightGray, for: .selected)
+            button.addTarget(self, action: #selector(selectDay(_:)), for: .touchUpOutside)
+            self.buttons.append(button)
         }
-            
+        
         stackView = UIStackView(arrangedSubviews: self.buttons)
         self.addSubview(stackView)
         stackView.spacing = 1

@@ -66,7 +66,7 @@ class GroupsListTVC: UITableViewController, UISearchBarDelegate {
                 if let indexPath = groupsSelectionTVC.tableView.indexPathForSelectedRow {
                     let group = groupsSelectionTVC.selectedGroups[indexPath.row]
                     if  !filteredGroups.contains(where: { filteredGroups -> Bool in
-                                            return group.name ==  filteredGroups.name}) {
+                                                    return group.name ==  filteredGroups.name}) {
                         filteredGroups.append(group)
                         myGroups = filteredGroups
                         tableView.reloadData()
