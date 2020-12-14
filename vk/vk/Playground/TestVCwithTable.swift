@@ -16,8 +16,6 @@ class TestVCwithTable: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath) as! TestCellForVC_T
-        //        cell.labelInTestCell.text = "\(indexPath.row)"
-        //        cell.labelInTestCell.textColor = UIColor.blue
         cell.labelInTestCell.text = users[indexPath.row]
         return cell
     }

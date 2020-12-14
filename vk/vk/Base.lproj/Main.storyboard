@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="-1502" y="77"/>
         </scene>
-        <!--Update Navigation Controller-->
+        <!--Transition Simple NavVC-->
         <scene sceneID="uFS-B9-W9X">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="ivK-yS-EOE" customClass="UpdateNavigationController" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="ivK-yS-EOE" customClass="TransitionSimpleNavVC" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Z7R-Tn-iC5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K2J-pU-xgM">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -631,7 +631,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Movint Lines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hlT-rh-FdQ">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Moving Lines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hlT-rh-FdQ">
                                                     <rect key="frame" x="20" y="0.0" width="350" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -642,6 +642,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="aCv-VZ-jqu" kind="show" id="h6D-GM-aYV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="k4x-mA-rhl" style="IBUITableViewCellStyleDefault" id="tPE-Hq-FMd">
+                                        <rect key="frame" x="0.0" y="663" width="390" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tPE-Hq-FMd" id="E3P-t3-cCe">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Transitions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k4x-mA-rhl">
+                                                    <rect key="frame" x="20" y="0.0" width="350" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="psZ-22-A92" kind="presentation" modalPresentationStyle="fullScreen" id="cBm-R0-YAz"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -973,14 +993,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TestCell" id="cfU-Ce-W35" customClass="TestCellForVC_T" customModule="vk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="44.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfU-Ce-W35" id="OBI-af-Rmo">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-b1-l3l">
-                                                    <rect key="frame" x="40" y="11.666666666666666" width="310" height="21.333333333333336"/>
+                                                    <rect key="frame" x="40" y="11.666666666666666" width="310" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1286,7 +1306,7 @@
                                 <size key="customSize" width="160" height="160"/>
                                 <connections>
                                     <outlet property="friendImage" destination="huR-oc-hIL" id="QH0-MV-qq2"/>
-                                    <segue destination="fTU-nd-cen" kind="show" identifier="OpenImage" id="vXT-oY-rtS"/>
+                                    <segue destination="fTU-nd-cen" kind="presentation" identifier="OpenImage" customClass="CustomSegue" customModule="vk" customModuleProvider="target" modalPresentationStyle="fullScreen" id="vXT-oY-rtS"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -1310,7 +1330,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xtw-lv-WjK">
-                                <rect key="frame" x="0.0" y="88" width="390" height="668"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="756"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="3DF-Xa-p7n" appends="YES" id="sD7-rF-Izd"/>
@@ -1765,6 +1785,80 @@
             </objects>
             <point key="canvasLocation" x="954" y="78"/>
         </scene>
+        <!--Transition StartVC-->
+        <scene sceneID="mth-Ez-9NX">
+            <objects>
+                <viewController id="psZ-22-A92" customClass="TransitionStartVC" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qtG-wK-fOX">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-fD-aLu">
+                                <rect key="frame" x="165" y="398.66666666666669" width="60" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="08u-e5-ZJJ" kind="presentation" identifier="Transition" modalPresentationStyle="fullScreen" id="3NC-RS-Le5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUK-bt-Lr0">
+                                <rect key="frame" x="166.66666666666666" y="144" width="57" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="menu:" destination="psZ-22-A92" eventType="touchUpInside" id="FeS-os-hn0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o8k-q6-tIA"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="EUK-bt-Lr0" firstAttribute="centerX" secondItem="qtG-wK-fOX" secondAttribute="centerX" id="Jrt-w2-Tqn"/>
+                            <constraint firstItem="pqR-fD-aLu" firstAttribute="centerY" secondItem="qtG-wK-fOX" secondAttribute="centerY" id="R6K-O2-eDb"/>
+                            <constraint firstItem="EUK-bt-Lr0" firstAttribute="top" secondItem="o8k-q6-tIA" secondAttribute="top" constant="100" id="ZZU-HF-eTb"/>
+                            <constraint firstItem="pqR-fD-aLu" firstAttribute="centerX" secondItem="qtG-wK-fOX" secondAttribute="centerX" id="pXa-KS-cSG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0gk-DW-RoL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCg-K8-lTr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-683" y="2499"/>
+        </scene>
+        <!--Transition EndVC-->
+        <scene sceneID="PBV-MJ-eFe">
+            <objects>
+                <viewController id="08u-e5-ZJJ" customClass="TransitionEndVC" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTz-tN-SsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFM-ch-Y0l">
+                                <rect key="frame" x="164.66666666666666" y="401.66666666666669" width="61" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="close" destination="08u-e5-ZJJ" eventType="touchUpInside" id="VwB-yg-7Fo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zZK-wg-FKh"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="qFM-ch-Y0l" firstAttribute="centerY" secondItem="VTz-tN-SsZ" secondAttribute="centerY" id="EPD-kD-qHe"/>
+                            <constraint firstItem="qFM-ch-Y0l" firstAttribute="centerX" secondItem="VTz-tN-SsZ" secondAttribute="centerX" id="Z0D-Fv-j7O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="y5J-ca-5b6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrm-Jr-z6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="2499"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5IC-Ft-tlz"/>
@@ -1791,6 +1885,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

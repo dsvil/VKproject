@@ -37,9 +37,9 @@ class FullScreenImageController: UIViewController {
         case .changed:
             recognizer.view!.center = CGPoint(x:view.center.x + translation.x , y:view.center.y + translation.y)
             gestureAnimator.fractionComplete = abs (translation.x) / 100
-        //            if translation.y > 100 {
-        //                dismiss(animated: true, completion: nil)
-        //            }
+                    if translation.y > 100 {
+                        dismiss(animated: true, completion: nil)
+                    }
         //        Dismiss сбрасывает экран и возвращается на предыдущий
         case .ended:
             gestureAnimator.stopAnimation(true)

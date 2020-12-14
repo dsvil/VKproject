@@ -28,16 +28,30 @@ extension UpdateNavigationController: UINavigationControllerDelegate {
                               from fromVC: UIViewController,
                               to toVC: UIViewController)
     -> UIViewControllerAnimatedTransitioning? {
-        if operation == .push { self.interactiveTransition.viewController = toVC
+        //        if operation == .push {
+        //            self.interactiveTransition.viewController = toVC
+        //            return CustomPushAnimatorX()
+        //        } else if operation == .pop {
+        //            if navigationController.viewControllers.first != toVC {
+        //                self.interactiveTransition.viewController = toVC
+        //            }
+        //            return CustomPopAnimatorX()
+        //        }
+        //        return nil }
+        
+        switch operation {
+        case .push:
+            self.interactiveTransition.viewController = toVC
             return CustomPushAnimatorX()
-        } else if operation == .pop {
+        case .pop:
             if navigationController.viewControllers.first != toVC {
                 self.interactiveTransition.viewController = toVC
-                
             }
             return CustomPopAnimatorX()
+        default:
+            return nil
         }
-        return nil }
+    }
 }
 
 final class CustomPushAnimatorX: NSObject, UIViewControllerAnimatedTransitioning {
@@ -51,6 +65,7 @@ final class CustomPushAnimatorX: NSObject, UIViewControllerAnimatedTransitioning
         
         transitionContext.containerView.addSubview(destination.view)
         destination.view.frame = source.view.frame
+        
         let translate = CGAffineTransform(translationX: 150, y: source.view.frame.width + 200)
         let rotate = CGAffineTransform(rotationAngle: -45)
         destination.view.transform = translate.concatenating(rotate)
@@ -59,28 +74,20 @@ final class CustomPushAnimatorX: NSObject, UIViewControllerAnimatedTransitioning
                                 delay: 0,
                                 options: .calculationModePaced,
                                 animations: {
-                                    UIView.addKeyframe(withRelativeStartTime: 0,
-                                                       relativeDuration: 0.75,
-                                                       animations: {
-                                                        let translation = CGAffineTransform(translationX: -100,y: 300)
-                                                        let scale = CGAffineTransform(scaleX: 0.8, y: 0.8)
-                                                        source.view.transform = translation.concatenating(scale)
-                                                       })
-                                    UIView.addKeyframe(withRelativeStartTime: 0.2,
-                                                       relativeDuration: 0.4,
-                                                       animations: {
-                                                        let translation = CGAffineTransform(translationX:
-                                                                                                0, y: 0)
-                                                        let rotate = CGAffineTransform(rotationAngle: 0)
-                                                        destination.view.transform = translation.concatenating(rotate)
-                                                       })
-                                    UIView.addKeyframe(withRelativeStartTime: 0.6,
-                                                       relativeDuration: 0.4,
-                                                       animations: {
-                                                        destination.view.transform = .identity
-                                                       })
-                                    
-                                    
+                                    UIView.addKeyframe(
+                                        withRelativeStartTime: 0,
+                                        relativeDuration: 0.75,
+                                        animations: {
+                                            let translation = CGAffineTransform(translationX: -100,y: 300)
+                                            let scale = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                                            source.view.transform = translation.concatenating(scale)
+                                        })
+                                    UIView.addKeyframe(
+                                        withRelativeStartTime: 0.2,
+                                        relativeDuration: 0.8,
+                                        animations: {
+                                            destination.view.transform = .identity
+                                        })
                                 }) { finished in
             if finished && !transitionContext.transitionWasCancelled {
                 source.view.transform = .identity
@@ -112,28 +119,20 @@ final class CustomPopAnimatorX: NSObject, UIViewControllerAnimatedTransitioning 
                                 delay: 0,
                                 options: .calculationModePaced,
                                 animations: {
-                                    UIView.addKeyframe(withRelativeStartTime: 0,
-                                                       relativeDuration: 0.4,
-                                                       animations: {
-                                                        let translation = CGAffineTransform(translationX:
-                                                                                                0, y: 0)
-                                                        let rotate = CGAffineTransform(rotationAngle: 0)
-                                                        source.view.transform = translation.concatenating(rotate)
-                                                       })
-                                    UIView.addKeyframe(withRelativeStartTime: 0.4,
-                                                       relativeDuration: 0.4,
-                                                       animations: {
-                                                        let translate = CGAffineTransform(translationX: 150, y: source.view.frame.width + 200)
-                                                        let rotate = CGAffineTransform(rotationAngle: -.pi/2)
-                                                        source.view.transform = translate.concatenating(rotate)
-                                                       })
-                                    UIView.addKeyframe(withRelativeStartTime: 0.25,
-                                                       relativeDuration: 0.75,
-                                                       animations: {
-                                                        destination.view.transform = .identity
-                                                       })
-                                    
-                                    
+                                    UIView.addKeyframe(
+                                        withRelativeStartTime: 0.4,
+                                        relativeDuration: 0.4,
+                                        animations: {
+                                            let translate = CGAffineTransform(translationX: 150, y: source.view.frame.width + 200)
+                                            let rotate = CGAffineTransform(rotationAngle: -.pi/2)
+                                            source.view.transform = translate.concatenating(rotate)
+                                        })
+                                    UIView.addKeyframe(
+                                        withRelativeStartTime: 0.25,
+                                        relativeDuration: 0.75,
+                                        animations: {
+                                            destination.view.transform = .identity
+                                        })
                                 }) { finished in
             if finished && !transitionContext.transitionWasCancelled {
                 source.removeFromParent()
@@ -148,8 +147,9 @@ final class CustomPopAnimatorX: NSObject, UIViewControllerAnimatedTransitioning 
 class CustomInteractiveTransition: UIPercentDrivenInteractiveTransition {
     var viewController: UIViewController? {
         didSet {
-            let recognizer = UIScreenEdgePanGestureRecognizer(target: self,
-                                                              action: #selector(handleScreenEdgeGesture(_:)))
+            let recognizer = UIScreenEdgePanGestureRecognizer(
+                target: self,
+                action: #selector(handleScreenEdgeGesture(_:)))
             recognizer.edges = [.left]
             viewController?.view.addGestureRecognizer(recognizer)
         }
