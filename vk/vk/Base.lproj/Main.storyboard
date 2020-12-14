@@ -133,7 +133,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="HmJ-kU-1Pg" secondAttribute="trailing" constant="50" id="258-Gg-47a"/>
+                                    <constraint firstAttribute="trailing" secondItem="HmJ-kU-1Pg" secondAttribute="trailing" priority="750" constant="50" id="258-Gg-47a"/>
                                     <constraint firstItem="lwd-l9-KKP" firstAttribute="top" secondItem="kqO-iT-kAa" secondAttribute="bottom" constant="50" id="3WO-pN-SX3"/>
                                     <constraint firstItem="HmJ-kU-1Pg" firstAttribute="top" secondItem="lwd-l9-KKP" secondAttribute="bottom" constant="50" id="65y-Hw-WhG"/>
                                     <constraint firstItem="OoW-70-A4T" firstAttribute="top" secondItem="HmJ-kU-1Pg" secondAttribute="bottom" constant="50" id="QQB-xO-eOk"/>
@@ -993,14 +993,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TestCell" id="cfU-Ce-W35" customClass="TestCellForVC_T" customModule="vk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="28" width="390" height="44.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfU-Ce-W35" id="OBI-af-Rmo">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-b1-l3l">
-                                                    <rect key="frame" x="40" y="11.666666666666666" width="310" height="20.666666666666671"/>
+                                                    <rect key="frame" x="40" y="11.666666666666666" width="310" height="21.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1264,15 +1264,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jvr-9y-lnS">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jvr-9y-lnS">
                             <size key="itemSize" width="400" height="400"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="40" minY="30" maxX="40" maxY="30"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendsPhotosCCell" id="qlH-7q-Ajz" customClass="FriendsPhotosCCell" customModule="vk" customModuleProvider="target">
-                                <rect key="frame" x="40" y="30" width="160" height="160"/>
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ipF-0U-H0z">
                                     <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
@@ -1683,7 +1683,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="AzU-WI-IPy" firstAttribute="leading" secondItem="SUC-2Z-XHG" secondAttribute="leading" constant="20" id="1Xf-OP-5sq"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="oTe-D6-joN" secondAttribute="trailing" constant="20" id="1db-cU-j4J"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="oTe-D6-joN" secondAttribute="trailing" priority="750" constant="20" id="1db-cU-j4J"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="TfG-Kp-FR1" secondAttribute="bottom" constant="30" id="4gX-mO-bbe"/>
                                         <constraint firstItem="TfG-Kp-FR1" firstAttribute="leading" secondItem="SUC-2Z-XHG" secondAttribute="leading" id="80M-vX-ffG"/>
                                         <constraint firstItem="oTe-D6-joN" firstAttribute="leading" secondItem="SUC-2Z-XHG" secondAttribute="leadingMargin" constant="70" id="A0M-UJ-ui9"/>

@@ -202,8 +202,8 @@
 		28C4BA66255E19E20036DF6B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A1B661C125870C4C00A12AF5 /* VC */,
 				A1FDB0822581B5D500B895DB /* ProfoundNavigation.swift */,
+				A1B661C125870C4C00A12AF5 /* VC */,
 				A1B661C525870CFD00A12AF5 /* Transitions */,
 				2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */,
 				A1B661C425870CB500A12AF5 /* TVC */,

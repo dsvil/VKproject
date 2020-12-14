@@ -36,6 +36,17 @@ class FriendsPhotosCVC: UICollectionViewController {
         }
     }
 }
+extension FriendsPhotosCVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellWidth = collectionView.bounds.width - 10
+        let cellHeight = collectionView.bounds.height
+        
+        if cellHeight > cellWidth {
+            return CGSize(width: cellWidth, height: cellWidth)
+        } else {
+            return CGSize(width: cellHeight/1.5, height: cellHeight/1.5)}
+    }
+}
 
 
 
