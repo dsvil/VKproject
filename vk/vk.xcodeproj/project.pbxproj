@@ -38,6 +38,7 @@
 		A153DF95257E1B2A001DC9BA /* TestAnimationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153DF94257E1B2A001DC9BA /* TestAnimationsVC.swift */; };
 		A17730912575F9FB00EA71DC /* NewsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177308F2575F9FB00EA71DC /* NewsCVCell.swift */; };
 		A177309725760F2D00EA71DC /* NewsCVCCFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177309625760F2D00EA71DC /* NewsCVCCFlowLayout.swift */; };
+		A19BD119258850730037AE85 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19BD118258850730037AE85 /* Session.swift */; };
 		A19DB302256FDE86007FCEB9 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB300256FDE86007FCEB9 /* NewsCell.swift */; };
 		A19DB306256FE528007FCEB9 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB305256FE528007FCEB9 /* AvatarView.swift */; };
 		A19DB3092570683F007FCEB9 /* SetUpBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB3082570683F007FCEB9 /* SetUpBars.swift */; };
@@ -90,6 +91,7 @@
 		A153DF94257E1B2A001DC9BA /* TestAnimationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAnimationsVC.swift; sourceTree = "<group>"; };
 		A177308F2575F9FB00EA71DC /* NewsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCVCell.swift; sourceTree = "<group>"; };
 		A177309625760F2D00EA71DC /* NewsCVCCFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCVCCFlowLayout.swift; sourceTree = "<group>"; };
+		A19BD118258850730037AE85 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		A19DB300256FDE86007FCEB9 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		A19DB305256FE528007FCEB9 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		A19DB3082570683F007FCEB9 /* SetUpBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpBars.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				28EAEB45255FA88300396CB7 /* Singlton.swift */,
+				A19BD118258850730037AE85 /* Session.swift */,
 				A1B5A5AB257108EC00419142 /* GetNews.swift */,
 				2848D6792561401800CB8904 /* GetFriends.swift */,
 				2848D67D2561407A00CB8904 /* GetGroups.swift */,
@@ -397,6 +400,7 @@
 				2848D68125624FE700CB8904 /* FriendsPhotosCCell.swift in Sources */,
 				A17730912575F9FB00EA71DC /* NewsCVCell.swift in Sources */,
 				A11C369E25844960006B4DFD /* TestIntaractiveVC.swift in Sources */,
+				A19BD119258850730037AE85 /* Session.swift in Sources */,
 				A11C36A12584B814006B4DFD /* TestMovingLinesVC.swift in Sources */,
 				A153DE6E2571E66C00D469E0 /* NewsControls.swift in Sources */,
 				28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */,
