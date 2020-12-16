@@ -22,17 +22,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pageTitle.text = "Vkontakte"
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWasShown(notification:)),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil)
         
         NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillBeHidden(notification:)),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil)
+            forName: UIResponder.keyboardWillShowNotification,
+            object: nil,
+            queue: .main,
+            using: { notification in
+                let userInfo = (notification as NSNotification).userInfo as! [String: Any]
+                let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+                self.scrollBottom.constant = frame.height
+            })
+
+        NotificationCenter.default.addObserver(
+            forName: UIResponder.keyboardWillHideNotification,
+            object: nil,
+            queue: .main,
+            using: { notification in
+                self.scrollBottom.constant = 0
+            })
         
         setUpNavTabBars()
     }
@@ -41,15 +48,7 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     @IBOutlet weak var scrollBottom: NSLayoutConstraint!
-    @objc func keyboardWasShown(notification: Notification) {
-        let userInfo = (notification as NSNotification).userInfo as! [String: Any]
-        let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
-        scrollBottom.constant = frame.height
-    }
-    @objc func keyboardWillBeHidden(notification: Notification) {
-        scrollBottom.constant = 0
-    }
-    
+
     @IBOutlet weak var logIn: UITextField!
     @IBOutlet weak var pwd: UITextField!
     @IBOutlet weak var pageTitle: UILabel!

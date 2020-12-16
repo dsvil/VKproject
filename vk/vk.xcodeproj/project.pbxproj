@@ -205,10 +205,9 @@
 		28C4BA66255E19E20036DF6B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A1FDB0822581B5D500B895DB /* ProfoundNavigation.swift */,
+				A102F9212588A95E0049C61B /* CVC */,
 				A1B661C125870C4C00A12AF5 /* VC */,
 				A1B661C525870CFD00A12AF5 /* Transitions */,
-				2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */,
 				A1B661C425870CB500A12AF5 /* TVC */,
 			);
 			path = Controllers;
@@ -225,6 +224,14 @@
 				2848D6672560BA2500CB8904 /* GroupsListCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A102F9212588A95E0049C61B /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */,
+			);
+			path = CVC;
 			sourceTree = "<group>";
 		};
 		A177308A2574D5A100EA71DC /* Weather */ = {
@@ -283,6 +290,7 @@
 		A1B661C525870CFD00A12AF5 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
+				A1FDB0822581B5D500B895DB /* ProfoundNavigation.swift */,
 				A1B661BB2586EEEB00A12AF5 /* TransitionSimpleNavVC.swift */,
 				A1B661BE2586F82600A12AF5 /* TransitionSegueAnimated.swift */,
 			);
