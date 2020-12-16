@@ -11,6 +11,25 @@ class TransitionStartVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(changeColor(notification:)),
+            name: someNotification,
+            object: "black")
+        
+        NotificationCenter.default.addObserver(
+            forName: someNotification,
+            object: "red",
+            queue: .main,
+            using: { notification in
+                let color = notification.userInfo?["color"] as? UIColor ?? UIColor.blue
+                self.view.backgroundColor = color
+            })
+    }
+    
+    @objc func changeColor(notification: Notification) {
+            view.backgroundColor = .black
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         segue.destination.transitioningDelegate = self // очень важно делегат передать в конечный контроллер

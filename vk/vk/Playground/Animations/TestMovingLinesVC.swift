@@ -15,8 +15,8 @@ class TestMovingLinesVC: UIViewController {
         super.viewDidLoad()
         firstLayer.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 4, height: 4)).cgPath
         secondLayer.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 4, height: 4)).cgPath
-        firstLayer.backgroundColor = UIColor.black.cgColor
-        secondLayer.backgroundColor = UIColor.black.cgColor
+        firstLayer.backgroundColor = UIColor.red.cgColor
+        secondLayer.backgroundColor = UIColor.red.cgColor
         firstLayer.frame = CGRect(x: 150, y: 200, width: 4, height: 4)
         secondLayer.frame = CGRect(x: 150, y: 200, width: 4, height: 4)
         firstLayer.masksToBounds = true

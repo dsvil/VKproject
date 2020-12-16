@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FLe-D8-rQt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FLe-D8-rQt">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -993,14 +993,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TestCell" id="cfU-Ce-W35" customClass="TestCellForVC_T" customModule="vk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="44.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfU-Ce-W35" id="OBI-af-Rmo">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-b1-l3l">
-                                                    <rect key="frame" x="40" y="11.666666666666666" width="310" height="21.333333333333336"/>
+                                                    <rect key="frame" x="40" y="11.666666666666666" width="310" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1845,12 +1845,31 @@
                                     <action selector="close" destination="08u-e5-ZJJ" eventType="touchUpInside" id="VwB-yg-7Fo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1e-cw-ed3">
+                                <rect key="frame" x="50" y="144" width="38" height="30"/>
+                                <state key="normal" title="Black"/>
+                                <connections>
+                                    <action selector="blackObserver:" destination="08u-e5-ZJJ" eventType="touchUpInside" id="KLL-q0-zUU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQF-rF-Svj">
+                                <rect key="frame" x="310" y="144" width="30" height="30"/>
+                                <state key="normal" title="Red"/>
+                                <connections>
+                                    <action selector="redObserver:" destination="08u-e5-ZJJ" eventType="touchUpInside" id="CN0-w6-uHC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zZK-wg-FKh"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
+                            <constraint firstItem="W1e-cw-ed3" firstAttribute="top" secondItem="zZK-wg-FKh" secondAttribute="top" constant="100" id="ECf-1s-yd3"/>
                             <constraint firstItem="qFM-ch-Y0l" firstAttribute="centerY" secondItem="VTz-tN-SsZ" secondAttribute="centerY" id="EPD-kD-qHe"/>
+                            <constraint firstItem="gQF-rF-Svj" firstAttribute="top" secondItem="zZK-wg-FKh" secondAttribute="top" constant="100" id="Qyc-ZU-RmJ"/>
                             <constraint firstItem="qFM-ch-Y0l" firstAttribute="centerX" secondItem="VTz-tN-SsZ" secondAttribute="centerX" id="Z0D-Fv-j7O"/>
+                            <constraint firstItem="zZK-wg-FKh" firstAttribute="trailing" secondItem="gQF-rF-Svj" secondAttribute="trailing" constant="50" id="ZgM-Pg-UcW"/>
+                            <constraint firstItem="gQF-rF-Svj" firstAttribute="leading" secondItem="W1e-cw-ed3" secondAttribute="trailing" priority="1" constant="222" id="ejq-6i-XgB"/>
+                            <constraint firstItem="W1e-cw-ed3" firstAttribute="leading" secondItem="zZK-wg-FKh" secondAttribute="leading" constant="50" id="wMe-7x-mAH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y5J-ca-5b6"/>

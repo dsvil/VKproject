@@ -29,9 +29,9 @@ class NewsCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDel
     override func awakeFromNib() {
         super.awakeFromNib()
         likes.initSetUp("heart", "0")
-        comment.initSetUp("bubble.left", "0", .black)
+        comment.initSetUp("bubble.left", "0", .red)
         eye.initSetUp("eye", "0")
-        forward.initSetUp("arrowshape.turn.up.right", "", .black)
+        forward.initSetUp("arrowshape.turn.up.right", "", .green)
     }
     
     @IBAction func commentsPressed(_ sender: Any) {
@@ -54,6 +54,7 @@ class NewsCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDel
         imageCollection.dataSource = self
         imageCollection.delegate = self
         imageCollection.reloadData()
+        
     }
     var mainImage = [UIImage]()
     

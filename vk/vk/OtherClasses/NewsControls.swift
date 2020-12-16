@@ -18,6 +18,7 @@ final class NewsControls: UIControl {
         count.text = text
         object.image = UIImage(systemName: image)
         object.tintColor = color
+        object.backgroundColor = .clear
     }    
     override func awakeFromNib() {
         super.awakeFromNib()
