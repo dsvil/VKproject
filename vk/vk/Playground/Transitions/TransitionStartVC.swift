@@ -11,7 +11,7 @@ class TransitionStartVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let someNotification = Notification.Name("someNotification")
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(changeColor(notification:)),

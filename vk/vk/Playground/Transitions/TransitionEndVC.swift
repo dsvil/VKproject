@@ -6,7 +6,6 @@
 //
 
 import UIKit
-let someNotification = Notification.Name("someNotification")
 class TransitionEndVC: UIViewController {
 
     override func viewDidLoad() {
@@ -17,6 +16,7 @@ class TransitionEndVC: UIViewController {
     @IBAction func close() {
         dismiss(animated: true)
     }
+    let someNotification = Notification.Name("someNotification")
     @IBAction func blackObserver(_ sender: Any) {
         NotificationCenter.default.post(name: someNotification, object: "black")
     }
