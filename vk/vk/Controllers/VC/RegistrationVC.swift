@@ -27,26 +27,26 @@ class RegistrationVC: UIViewController {
         let offset = abs(self.logIn.frame.midY -
                             self.pwd.frame.midY)
         self.logIn.transform = CGAffineTransform(translationX: 0, y: offset)
-        self.pwd.transform = CGAffineTransform(translationX: 0, y:
-                                                -offset)
-        UIView.animateKeyframes(withDuration: 1,
-                                delay: 0,
-                                options: .calculationModeCubicPaced,
-                                animations: {
-                                    UIView.addKeyframe(withRelativeStartTime: 0,
-                                                       relativeDuration: 0.5,
-                                                       animations: {
-                                                        self.logIn.transform = CGAffineTransform(translationX: 150, y:
-                                                                                                    50)
-                                                        self.pwd.transform = CGAffineTransform(translationX: -150,
-                                                                                               y: -50) })
-                                    UIView.addKeyframe(withRelativeStartTime: 0.5,
-                                                       relativeDuration: 0.5,
-                                                       animations: {
-                                                        self.logIn.transform = .identity
-                                                        self.pwd.transform = .identity
-                                                       })
-                                }, completion: nil)
+        self.pwd.transform = CGAffineTransform(translationX: 0, y: -offset)
+        UIView.animateKeyframes(
+            withDuration: 1,
+            delay: 0,
+            options: .calculationModeCubicPaced,
+            animations: {
+                UIView.addKeyframe(
+                    withRelativeStartTime: 0,
+                    relativeDuration: 0.5,
+                    animations: {
+                        self.logIn.transform = CGAffineTransform(translationX: 150, y: 50)
+                        self.pwd.transform = CGAffineTransform(translationX: -150, y: -50) })
+                UIView.addKeyframe(
+                    withRelativeStartTime: 0.5,
+                    relativeDuration: 0.5,
+                    animations: {
+                        self.logIn.transform = .identity
+                        self.pwd.transform = .identity
+                    })
+            }, completion: nil)
         
         let fadeInAnimation = CABasicAnimation(keyPath: "opacity")
         fadeInAnimation.fromValue = 0
@@ -68,11 +68,12 @@ class RegistrationVC: UIViewController {
         self.secondPwdText.layer.add(animationsGroup, forKey: nil)
         
         self.titleLabel.transform = CGAffineTransform(translationX: 0, y:-100)
-        let animator = UIViewPropertyAnimator(duration: 1,
-                                              dampingRatio: 0.5,
-                                              animations: {
-                                                self.titleLabel.transform = .identity
-                                              })
+        let animator = UIViewPropertyAnimator(
+            duration: 1,
+            dampingRatio: 0.5,
+            animations: {
+                self.titleLabel.transform = .identity
+            })
         animator.startAnimation(afterDelay: 1)
         
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
@@ -164,6 +165,5 @@ class RegistrationVC: UIViewController {
             interactiveAnimator.startAnimation()
         default: return
         }
-        
     }
 }

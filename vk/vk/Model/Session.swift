@@ -6,12 +6,11 @@
 //
 
 import Foundation
-class Session {
-    var token: String
-    var userId: Int
-    private init(token: String, userId:Int){
-        self.token = token
-        self.userId = userId
-    }
-    static let instance = Session (token: "", userId: 0)
+final class Session {
+    var token: String?
+    var userId: Int?
+    private init(){}
+    static let instance = Session ()
 }
+
+

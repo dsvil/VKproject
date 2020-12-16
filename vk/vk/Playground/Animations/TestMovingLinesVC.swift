@@ -56,5 +56,4 @@ class TestMovingLinesVC: UIViewController {
         secondLayer.add(rotationRight, forKey: nil)
         
     }
-    
 }

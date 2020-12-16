@@ -26,13 +26,6 @@ class NewsCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDel
         likes.animateAuthButton()
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        likes.initSetUp("heart", "0")
-        comment.initSetUp("bubble.left", "0", .red)
-        eye.initSetUp("eye", "0")
-        forward.initSetUp("arrowshape.turn.up.right", "", .green)
-    }
     
     @IBAction func commentsPressed(_ sender: Any) {
         comment.countAmount()

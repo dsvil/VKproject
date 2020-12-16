@@ -55,5 +55,4 @@ class InitialAnimation: UIViewController {
                                 },
                                 completion: nil)
     }
-    
 }

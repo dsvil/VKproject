@@ -30,6 +30,10 @@ class NewsTVC: UITableViewController {
         cell.avatarImage.image = currentLines.icon
         cell.status.text = currentLines.status
         cell.mainImage = currentLines.mainImage
+        cell.likes.initSetUp("heart", "0")
+        cell.comment.initSetUp("bubble.left", "0", .red)
+        cell.eye.initSetUp("eye", "0")
+        cell.forward.initSetUp("arrowshape.turn.up.right", "", .green)
         return cell
     }
 }

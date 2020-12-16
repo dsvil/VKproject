@@ -28,16 +28,6 @@ extension UpdateNavigationController: UINavigationControllerDelegate {
                               from fromVC: UIViewController,
                               to toVC: UIViewController)
     -> UIViewControllerAnimatedTransitioning? {
-        //        if operation == .push {
-        //            self.interactiveTransition.viewController = toVC
-        //            return CustomPushAnimatorX()
-        //        } else if operation == .pop {
-        //            if navigationController.viewControllers.first != toVC {
-        //                self.interactiveTransition.viewController = toVC
-        //            }
-        //            return CustomPopAnimatorX()
-        //        }
-        //        return nil }
         
         switch operation {
         case .push:

@@ -18,11 +18,9 @@ class ViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         pageTitle.text = "Vkontakte"
-        
         NotificationCenter.default.addObserver(
             forName: UIResponder.keyboardWillShowNotification,
             object: nil,
