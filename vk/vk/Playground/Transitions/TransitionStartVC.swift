@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class TransitionStartVC: UIViewController {
+    
+    let weatherService = WeatherService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,7 @@ class TransitionStartVC: UIViewController {
                 let color = notification.userInfo?["color"] as? UIColor ?? UIColor.blue
                 self.view.backgroundColor = color
             })
+        weatherService.loadWeatherData(city: "Moscow")
     }
     
     @objc func changeColor(notification: Notification) {

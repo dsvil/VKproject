@@ -118,16 +118,26 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wkz-vp-M0A" kind="presentation" identifier="LogInSegue" id="V3N-8r-T2d"/>
+                                            <segue destination="lNR-0G-Cvb" kind="presentation" identifier="LogInSegue" modalPresentationStyle="fullScreen" id="5D0-6z-LfS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xg-oP-nRT">
-                                        <rect key="frame" x="145" y="369.66666666666669" width="100" height="30"/>
-                                        <state key="normal" title="Sign in, please">
+                                        <rect key="frame" x="155" y="369.66666666666669" width="80" height="30"/>
+                                        <state key="normal" title="PlayGround">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="yLc-aj-zlH" kind="show" identifier="SignIn" id="bVb-kL-09M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmh-lW-1hI">
+                                        <rect key="frame" x="149.66666666666666" y="449.66666666666669" width="91" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="DirectEnter">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="wkz-vp-M0A" kind="presentation" identifier="Direct" id="s2s-vv-6Ys"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -135,6 +145,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="HmJ-kU-1Pg" secondAttribute="trailing" priority="750" constant="50" id="258-Gg-47a"/>
                                     <constraint firstItem="lwd-l9-KKP" firstAttribute="top" secondItem="kqO-iT-kAa" secondAttribute="bottom" constant="50" id="3WO-pN-SX3"/>
+                                    <constraint firstItem="zmh-lW-1hI" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="4Kt-e8-gla"/>
                                     <constraint firstItem="HmJ-kU-1Pg" firstAttribute="top" secondItem="lwd-l9-KKP" secondAttribute="bottom" constant="50" id="65y-Hw-WhG"/>
                                     <constraint firstItem="OoW-70-A4T" firstAttribute="top" secondItem="HmJ-kU-1Pg" secondAttribute="bottom" constant="50" id="QQB-xO-eOk"/>
                                     <constraint firstItem="lwd-l9-KKP" firstAttribute="leading" secondItem="1yP-Ep-sBs" secondAttribute="leading" constant="50" id="Vmn-oY-XKn"/>
@@ -146,6 +157,7 @@
                                     <constraint firstItem="lwd-l9-KKP" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="hq0-PZ-sGR"/>
                                     <constraint firstItem="3Xg-oP-nRT" firstAttribute="top" secondItem="OoW-70-A4T" secondAttribute="bottom" constant="20" id="jpj-R6-Yys"/>
                                     <constraint firstItem="kqO-iT-kAa" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="rCq-cN-7V0"/>
+                                    <constraint firstItem="zmh-lW-1hI" firstAttribute="top" secondItem="3Xg-oP-nRT" secondAttribute="bottom" constant="50" id="tC1-uD-E7L"/>
                                     <constraint firstItem="OoW-70-A4T" firstAttribute="centerX" secondItem="1yP-Ep-sBs" secondAttribute="centerX" id="wEO-jF-9Ll"/>
                                 </constraints>
                             </scrollView>
@@ -182,6 +194,41 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="116" y="-408"/>
+        </scene>
+        <!--Log InVC-->
+        <scene sceneID="HWR-yE-xUQ">
+            <objects>
+                <viewController id="lNR-0G-Cvb" customClass="VKLogInVC" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YkS-4z-VPI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDg-I8-9St">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Ni-Yo-Tk6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ni-Yo-Tk6" firstAttribute="bottom" secondItem="qDg-I8-9St" secondAttribute="bottom" priority="750" id="4th-w2-QbC"/>
+                            <constraint firstItem="2Ni-Yo-Tk6" firstAttribute="trailing" secondItem="qDg-I8-9St" secondAttribute="trailing" id="F2I-g5-yrm"/>
+                            <constraint firstItem="qDg-I8-9St" firstAttribute="top" secondItem="2Ni-Yo-Tk6" secondAttribute="top" id="ktT-eB-Kzm"/>
+                            <constraint firstItem="qDg-I8-9St" firstAttribute="leading" secondItem="2Ni-Yo-Tk6" secondAttribute="leading" id="xt8-jT-BGM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="qDg-I8-9St" id="Tp5-74-7Y6"/>
+                        <segue destination="wkz-vp-M0A" kind="presentation" identifier="Start" id="qfD-To-2Fc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUA-m9-Jb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="-737"/>
         </scene>
         <!--RegistrationVC-->
         <scene sceneID="Azi-XR-dRX">
@@ -993,14 +1040,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TestCell" id="cfU-Ce-W35" customClass="TestCellForVC_T" customModule="vk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfU-Ce-W35" id="OBI-af-Rmo">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-b1-l3l">
-                                                    <rect key="frame" x="40" y="11.666666666666664" width="310" height="21"/>
+                                                    <rect key="frame" x="40" y="11.666666666666666" width="310" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1767,6 +1814,7 @@
         <scene sceneID="drf-Qz-hwV">
             <objects>
                 <tabBarController modalPresentationStyle="fullScreen" id="wkz-vp-M0A" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Avr-xm-48J"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xZl-Ii-Qjj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1880,7 +1928,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="V3N-8r-T2d"/>
+        <segue reference="qfD-To-2Fc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="newspaper" catalog="system" width="128" height="108"/>

@@ -59,6 +59,8 @@ class ViewController: UIViewController {
             return check
         case "SignIn":
             return true
+        case "Direct":
+            return true
         default:
             return false
         }
