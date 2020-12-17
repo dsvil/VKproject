@@ -31,7 +31,7 @@ class VKLogInVC: UIViewController {
                     URLQueryItem(name: "display", value: "mobile"),
                     URLQueryItem(name: "redirect_uri", value:
         "https://oauth.vk.com/blank.html"),
-                    URLQueryItem(name: "scope", value: "262150"),
+                    URLQueryItem(name: "scope", value: "262144"),
                     URLQueryItem(name: "response_type", value: "token"),
                     URLQueryItem(name: "v", value: "5.126")
                 ]
@@ -39,20 +39,17 @@ class VKLogInVC: UIViewController {
                 webview.load(request)
         
     }
-//    override func viewDidAppear(_ animated: Bool) {
-//        dismiss(animated: true, completion: nil)
-//    }
 }
 
 extension VKLogInVC: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse:
-WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy)
--> Void) {
+                    WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy)
+                        -> Void) {
         guard let url = navigationResponse.response.url, url.path ==
-"/blank.html", let fragment = url.fragment  else {
+                "/blank.html", let fragment = url.fragment  else {
             decisionHandler(.allow)
-return
-}
+            return
+        }
         let params = fragment
             .components(separatedBy: "&")
             .map { $0.components(separatedBy: "=") }
@@ -64,10 +61,9 @@ return
                 return dict
         }
         Session.instance.token = params["access_token"]
-        Session.instance.userId = Int(params["user_id"]!)
+        Session.instance.userId = Int(params["user_id"] ?? "0")
         
         decisionHandler(.cancel)
-        
         let friends = ApiGetFriendsVK()
         friends.getData(fields: "bdate")
 
@@ -75,7 +71,7 @@ return
         groups.getData(fields: "city,members_count,start_date")
 
         let photos = ApiGetPhotosVK()
-        photos.getData()
+        photos.getData(user: 6548098)
 
         let search = ApiGetGroupsVKSearch()
         search.getData(searchText: "ios")

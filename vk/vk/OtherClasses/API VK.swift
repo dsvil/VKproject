@@ -11,19 +11,19 @@ import Alamofire
 class ApiGetFriendsVK {
     
     let baseUrl = "https://api.vk.com/method/"
-    let apiKey = Session.instance.token
-    let user = Session.instance.userId
     let version = "5.126"
     func getData(fields: String?){
         let request = "friends.get"
+        guard let user = Session.instance.userId else {return}
+        guard let apiKey = Session.instance.token else {return}
         let parameters: Parameters = [
-            "user_ids": user!,
+            "user_ids": user,
             "fields": fields as Any,
-            "access_token": apiKey!,
+            "access_token": apiKey,
             "v": version
         ]
         let url = baseUrl+request
-        AF.request(url, parameters:
+        AF.request(url, method: .get, parameters:
                     parameters).responseJSON { repsonse in
                         print(repsonse.value!)
                     }
@@ -33,20 +33,20 @@ class ApiGetFriendsVK {
 class ApiGetGroupsVK {
     
     let baseUrl = "https://api.vk.com/method/"
-    let apiKey = Session.instance.token
-    let user = Session.instance.userId
     let version = "5.126"
     func getData(fields: String?){
+        guard let user = Session.instance.userId else {return}
+        guard let apiKey = Session.instance.token else {return}
         let request = "groups.get"
         let parameters: Parameters = [
-            "user_ids": user!,
+            "user_ids": user,
             "extended": 1,
             "fields": fields as Any,
-            "access_token": apiKey!,
+            "access_token": apiKey,
             "v": version
         ]
         let url = baseUrl+request
-        AF.request(url, parameters:
+        AF.request(url, method: .get, parameters:
                     parameters).responseJSON { repsonse in
                         print(repsonse.value!)
                     }
@@ -56,20 +56,19 @@ class ApiGetGroupsVK {
 class ApiGetPhotosVK {
     
     let baseUrl = "https://api.vk.com/method/"
-    let apiKey = Session.instance.token
-    let user = Session.instance.userId
     let version = "5.126"
-    func getData(){
+    func getData(user:Int?){
         let request = "photos.get"
+        guard let apiKey = Session.instance.token else {return}
         let parameters: Parameters = [
-            "owner_id": user!,
+            "owner_id": user as Any,
             "album_id": "profile",
             "extended": 1,
-            "access_token": apiKey!,
+            "access_token": apiKey,
             "v": version
         ]
         let url = baseUrl+request
-        AF.request(url, parameters:
+        AF.request(url, method: .get, parameters:
                     parameters).responseJSON { repsonse in
                         print(repsonse.value!)
                     }
@@ -79,19 +78,19 @@ class ApiGetPhotosVK {
 class ApiGetGroupsVKSearch {
     
     let baseUrl = "https://api.vk.com/method/"
-    let apiKey = Session.instance.token
     let version = "5.126"
     func getData(searchText: String){
         let request = "groups.search"
+        guard let apiKey = Session.instance.token else {return}
         let parameters: Parameters = [
             "q": searchText,
             "type": "group",
             "sort": 0,
-            "access_token": apiKey!,
+            "access_token": apiKey,
             "v": version
         ]
         let url = baseUrl+request
-        AF.request(url, parameters:
+        AF.request(url, method: .get, parameters:
                     parameters).responseJSON { repsonse in
                         print(repsonse.value!)
                     }
