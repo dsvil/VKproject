@@ -8,14 +8,20 @@
 import UIKit
 
 class GroupsListTVC: UITableViewController, UISearchBarDelegate {
-    var myGroups = GetGroups.myGroups()
-    var filteredGroups = [Group]()
+    var myGroups = [VkGroup]()
+    var filteredGroups = [VkGroup]()
+    
     @IBOutlet weak var search: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filteredGroups = myGroups
         search.delegate = self
+        
+        ApiGetGroupsVK.getData(fields: "city,members_count,start_date") { [self]groups in
+            self.myGroups = groups
+            self.filteredGroups = groups
+            self.tableView.reloadData()
+        }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -44,10 +50,8 @@ class GroupsListTVC: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsListSell", for: indexPath) as! GroupsListCell
         
         let myGroup = filteredGroups[indexPath.row]
-        
         cell.groupsListLabel.text = myGroup.name
-        cell.groupsListIcon.image = myGroup.icon
-        // Configure the cell...
+        cell.groupsListIcon.image = try? UIImage(data: Data(contentsOf: URL(string: myGroup.icon ) ?? URL(string: "http://www.google.com")!))
         
         return cell
     }
@@ -57,14 +61,14 @@ class GroupsListTVC: UITableViewController, UISearchBarDelegate {
             filteredGroups.remove(at: indexPath.row)
             myGroups = filteredGroups
             tableView.deleteRows(at: [indexPath], with: .middle)
-        } 
+        }
     }
     
     @IBAction func getBackToMyGroups(unwindSegue: UIStoryboardSegue) {
         if unwindSegue.identifier == "SelectGroup" {
             if let groupsSelectionTVC = unwindSegue.source as? GroupsSelectionTVC {
                 if let indexPath = groupsSelectionTVC.tableView.indexPathForSelectedRow {
-                    let group = groupsSelectionTVC.selectedGroups[indexPath.row]
+                    let group = groupsSelectionTVC.filteredGroups[indexPath.row]
                     if  !filteredGroups.contains(where: { filteredGroups -> Bool in
                                                     return group.name ==  filteredGroups.name}) {
                         filteredGroups.append(group)

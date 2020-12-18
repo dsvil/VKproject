@@ -66,3 +66,5 @@ final class CircleImage : UIImageView {
         layer.cornerRadius = (bounds.height / 2)
     }
 }
+
+
