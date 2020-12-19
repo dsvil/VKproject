@@ -14,7 +14,6 @@
 		2848D66E2560BC8700CB8904 /* GroupsSelectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D66D2560BC8700CB8904 /* GroupsSelectionTVC.swift */; };
 		2848D6712560C0BE00CB8904 /* TestVCwithTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6702560C0BE00CB8904 /* TestVCwithTable.swift */; };
 		2848D6742560C22600CB8904 /* TestCellForVC&T.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6732560C22600CB8904 /* TestCellForVC&T.swift */; };
-		2848D67A2561401800CB8904 /* GetFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6792561401800CB8904 /* GetFriends.swift */; };
 		2848D68125624FE700CB8904 /* FriendsPhotosCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D68025624FE700CB8904 /* FriendsPhotosCCell.swift */; };
 		2848D6842562501800CB8904 /* FriendsPhotosCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */; };
 		289B1DA2255ECBC10086815B /* TestDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B1DA1255ECBC10086815B /* TestDraw.swift */; };
@@ -72,7 +71,6 @@
 		2848D66D2560BC8700CB8904 /* GroupsSelectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSelectionTVC.swift; sourceTree = "<group>"; };
 		2848D6702560C0BE00CB8904 /* TestVCwithTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCwithTable.swift; sourceTree = "<group>"; };
 		2848D6732560C22600CB8904 /* TestCellForVC&T.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestCellForVC&T.swift"; sourceTree = "<group>"; };
-		2848D6792561401800CB8904 /* GetFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriends.swift; sourceTree = "<group>"; };
 		2848D68025624FE700CB8904 /* FriendsPhotosCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotosCCell.swift; sourceTree = "<group>"; };
 		2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotosCVC.swift; sourceTree = "<group>"; };
 		289B1DA1255ECBC10086815B /* TestDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDraw.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				A102C54D258C89CA00CEBE4D /* FriendsPhotos.swift */,
 				A19BD118258850730037AE85 /* Session.swift */,
 				A1B5A5AB257108EC00419142 /* GetNews.swift */,
-				2848D6792561401800CB8904 /* GetFriends.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -467,7 +464,6 @@
 				A1A9E6DA2589E1CB003AC634 /* WeatherService.swift in Sources */,
 				A102C54B258C89AC00CEBE4D /* VkFriends.swift in Sources */,
 				A1B661B92585DD4A00A12AF5 /* TransitionEndVC.swift in Sources */,
-				2848D67A2561401800CB8904 /* GetFriends.swift in Sources */,
 				2848D6622560B69500CB8904 /* FriendsListTVC.swift in Sources */,
 				2848D6682560BA2500CB8904 /* GroupsListCell.swift in Sources */,
 				2848D66E2560BC8700CB8904 /* GroupsSelectionTVC.swift in Sources */,

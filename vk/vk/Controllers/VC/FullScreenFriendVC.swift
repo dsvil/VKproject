@@ -11,12 +11,13 @@ class FullScreenImageController: UIViewController {
     
     @IBOutlet weak var fullScreen: UIImageView!
     var startFromImage: Int!
-    var friendImages: [UIImage]!
+    var friendImages: [ApiGetPhotosVK.PhotoStaff]!
     var gestureAnimator = UIViewPropertyAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fullScreen.image = friendImages[startFromImage]
+        //        fullScreen.image = friendImages[startFromImage].sizes[4].url
+        fullScreen.image = try? UIImage(data: Data(contentsOf: URL(string: friendImages[startFromImage].sizes[3].url ) ?? URL(string: "http://www.google.com")!))
     }
     
     @IBAction func gesture(recognizer: UIPanGestureRecognizer) {
@@ -37,9 +38,9 @@ class FullScreenImageController: UIViewController {
         case .changed:
             recognizer.view!.center = CGPoint(x:view.center.x + translation.x , y:view.center.y + translation.y)
             gestureAnimator.fractionComplete = abs (translation.x) / 100
-                    if translation.y > 100 {
-                        dismiss(animated: true, completion: nil)
-                    }
+            if translation.y > 100 {
+                dismiss(animated: true, completion: nil)
+            }
         //        Dismiss сбрасывает экран и возвращается на предыдущий
         case .ended:
             gestureAnimator.stopAnimation(true)
@@ -58,7 +59,8 @@ class FullScreenImageController: UIViewController {
                         self.startFromImage = self.friendImages.count - 1
                     }
                 }
-                self.fullScreen.image = self.friendImages[self.startFromImage]
+                self.fullScreen.image = try? UIImage(data: Data(contentsOf: URL(string: self.friendImages[self.startFromImage].sizes[3].url ) ?? URL(string: "http://www.google.com")!))
+                
                 self.fullScreen.alpha = 1
                 self.fullScreen.transform = .identity
                 self.fullScreen.center = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2)

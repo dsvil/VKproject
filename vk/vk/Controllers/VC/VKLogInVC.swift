@@ -64,9 +64,6 @@ extension VKLogInVC: WKNavigationDelegate {
         Session.instance.userId = Int(params["user_id"] ?? "0")
         
         decisionHandler(.cancel)
-        ApiGetFriendsVK.getData() { [self]groups in
-   print(groups)
-        }
         self.performSegue(withIdentifier: "Start", sender: self)
     }
 }

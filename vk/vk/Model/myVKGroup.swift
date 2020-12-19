@@ -22,20 +22,13 @@ struct VkGroup: Decodable {
     enum CodingKeys: String, CodingKey {
         case id
         case name
-        case icon = "photo_200"
+        case icon = "photo_50"
     }
-//    convenience required init(from decoder: Decoder) throws {
-//            self.init()
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        self.id = try values.decode(Int.self, forKey: .id)
-//        self.name = try values.decode(String.self, forKey: .name)
-//        self.icon = try values.decode(String.self, forKey: .icon)
-//    }
 }
 final class ApiGetGroupsVK {
     
-   static let baseUrl = "https://api.vk.com/method/"
-   static let version = "5.126"
+    static let baseUrl = "https://api.vk.com/method/"
+    static let version = "5.126"
     static func getData(fields: String?, completion: @escaping ([VkGroup]) -> Void) {
         guard let user = Session.instance.userId else {return}
         guard let apiKey = Session.instance.token else {return}

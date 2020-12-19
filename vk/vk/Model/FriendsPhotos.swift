@@ -7,24 +7,40 @@
 
 import Foundation
 import Alamofire
+
 class ApiGetPhotosVK {
     
-    let baseUrl = "https://api.vk.com/method/"
-    let version = "5.126"
-    func getData(user:Int?){
+    class Response: Decodable {
+        var response: Datable
+    }
+    class Datable: Decodable {
+        var items: [PhotoStaff]
+    }
+    struct PhotoStaff: Decodable {
+        var id: Int
+        var sizes: [GetUrl]
+    }
+    struct GetUrl: Decodable {
+        var type: String = ""
+        var url: String = ""
+    }
+    static let baseUrl = "https://api.vk.com/method/"
+    static let version = "5.126"
+    static func getData(user:Int?, completion: @escaping ([PhotoStaff]) -> Void){
         let request = "photos.get"
         guard let apiKey = Session.instance.token else {return}
         let parameters: Parameters = [
             "owner_id": user as Any,
-            "album_id": "profile",
-            "extended": 1,
+            "album_id": "wall",
             "access_token": apiKey,
             "v": version
         ]
         let url = baseUrl+request
         AF.request(url, method: .get, parameters:
-                    parameters).responseJSON { repsonse in
-                        print(repsonse.value!)
+                    parameters).responseData {repsonse in
+                        guard let data = repsonse.value  else {return}
+                        let photos = try! JSONDecoder().decode(Response.self, from: data)
+                        completion(photos.response.items)
                     }
     }
 }

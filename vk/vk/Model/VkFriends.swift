@@ -6,28 +6,31 @@
 //
 
 import Foundation
+import UIKit
 import Alamofire
 
-class ResponseFd: Decodable {
-    var response: DatableFd
-}
-class DatableFd: Decodable {
-    var items: [VkFriend]
-}
-struct VkFriend: Decodable {
-    dynamic var id: Int = 0
-    dynamic var firstName: String = ""
-    dynamic var lastName: String = ""
-    dynamic var icon: String = ""
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case firstName = "first_name"
-        case lastName = "last_name"
-        case icon = "photo_200_orig"
-    }
-}
 class ApiGetFriendsVK {
+    
+    class Response: Decodable {
+        var response: Datable
+    }
+    class Datable: Decodable {
+        var items: [VkFriend]
+    }
+    struct VkFriend: Decodable {
+        dynamic var id: Int = 0
+        dynamic var firstName: String = ""
+        dynamic var lastName: String = ""
+        dynamic var icon: String = ""
+        
+        enum CodingKeys: String, CodingKey {
+            case id
+            case firstName = "first_name"
+            case lastName = "last_name"
+            case icon = "photo_100"
+        }
+    }
+    
     static let baseUrl = "https://api.vk.com/method/"
     static let version = "5.126"
     static func getData(completion: @escaping ([VkFriend]) -> Void){
@@ -36,7 +39,7 @@ class ApiGetFriendsVK {
         guard let apiKey = Session.instance.token else {return}
         let parameters: Parameters = [
             "user_ids": user,
-            "fields": "photo_200_orig",
+            "fields": "photo_100",
             "access_token": apiKey,
             "v": version
         ]
@@ -44,8 +47,8 @@ class ApiGetFriendsVK {
         AF.request(url, method: .get, parameters:
                     parameters).responseData {repsonse in
                         guard let data = repsonse.value  else {return}
-                        let groups = try! JSONDecoder().decode(ResponseFd.self, from: data)
-                        completion(groups.response.items)
+                        let friends = try! JSONDecoder().decode(Response.self, from: data)
+                        completion(friends.response.items)
                     }
     }
 }

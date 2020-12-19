@@ -9,23 +9,6 @@ import Foundation
 import Alamofire
 
 
-//class Response: Decodable {
-//    var response: Datable
-//}
-//class Datable: Decodable {
-//    var items: [VkGroup]
-//}
-//struct VkGroup: Decodable {
-//    dynamic var id: Int = 0
-//    dynamic var name: String = ""
-//    dynamic var icon: String = ""
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id
-//        case name
-//        case icon = "photo_200"
-//    }
-
 final class ApiGetGroupsVKSearch {
     
     static let baseUrl = "https://api.vk.com/method/"
