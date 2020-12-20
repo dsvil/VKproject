@@ -8,12 +8,13 @@
 import UIKit
 
 class FriendsPhotosCVC: UICollectionViewController {
-    var friendsId:ApiGetFriendsVK.VkFriend!
+    var friendsId = Int()
     var photos = [ApiGetPhotosVK.PhotoStaff]()
+    let size = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ApiGetPhotosVK.getData(user: friendsId.id) { [self](photos) in
+        ApiGetPhotosVK.getData(user: friendsId) { [self](photos) in
             self.photos = photos
             collectionView.reloadData()
         }
@@ -27,11 +28,10 @@ class FriendsPhotosCVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendsPhotosCCell", for: indexPath) as! FriendsPhotosCCell
-        let photo = photos[indexPath.row].sizes[3] // решить что делать с этими индексами
-        cell.friendImage.image = try? UIImage(data: Data(contentsOf: URL(string: photo.url ) ?? URL(string: "http://www.google.com")!))
+        let photo = photos[indexPath.row].sizes[size].url // решить что делать с этими индексами, возможно сюда можно поставить сабскрипт для проверки индексов
+        cell.friendImage.image = try? UIImage(data: Data(contentsOf: URL(string: photo ) ?? URL(string: "http://www.google.com" )!))
         return cell
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OpenImage" {

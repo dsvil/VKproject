@@ -20,7 +20,7 @@ dynamic var weatherName = ""
 dynamic var weatherIcon = ""
 dynamic var windSpeed = 0.0
 dynamic var windDegrees = 0.0
-    dynamic var city = ""
+dynamic var city = ""
     enum CodingKeys: String, CodingKey {
         case date = "dt"
         case main

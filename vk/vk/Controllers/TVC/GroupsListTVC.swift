@@ -17,7 +17,7 @@ class GroupsListTVC: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         search.delegate = self
         
-        ApiGetGroupsVK.getData(fields: "city,members_count,start_date") { [self]groups in
+        ApiGetGroupsVK.getData() { [self]groups in
             self.myGroups = groups
             self.filteredGroups = groups
             self.tableView.reloadData()

@@ -56,6 +56,7 @@
 		A1B8A6762583050200407E48 /* Test3DAnimationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8A6752583050200407E48 /* Test3DAnimationsVC.swift */; };
 		A1C2E75A256E2E8600F044C6 /* CircleShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2E759256E2E8600F044C6 /* CircleShadow.swift */; };
 		A1C2E75F256E79FE00F044C6 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2E75E256E79FE00F044C6 /* LikeControl.swift */; };
+		A1D136E5258EDBD7009FDDBC /* TestWeatherStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D136E4258EDBD7009FDDBC /* TestWeatherStuff.swift */; };
 		A1FDB0832581B5D500B895DB /* ProfoundNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FDB0822581B5D500B895DB /* ProfoundNavigation.swift */; };
 		A1FDB0882581BF9100B895DB /* TestTransformationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FDB0872581BF9100B895DB /* TestTransformationsVC.swift */; };
 		A1FDB08B2581C95100B895DB /* TestRunningCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FDB08A2581C95100B895DB /* TestRunningCloud.swift */; };
@@ -116,6 +117,7 @@
 		A1B8A6752583050200407E48 /* Test3DAnimationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3DAnimationsVC.swift; sourceTree = "<group>"; };
 		A1C2E759256E2E8600F044C6 /* CircleShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadow.swift; sourceTree = "<group>"; };
 		A1C2E75E256E79FE00F044C6 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		A1D136E4258EDBD7009FDDBC /* TestWeatherStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWeatherStuff.swift; sourceTree = "<group>"; };
 		A1FDB0822581B5D500B895DB /* ProfoundNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfoundNavigation.swift; sourceTree = "<group>"; };
 		A1FDB0872581BF9100B895DB /* TestTransformationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTransformationsVC.swift; sourceTree = "<group>"; };
 		A1FDB08A2581C95100B895DB /* TestRunningCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRunningCloud.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				A148B36E2570A5D80046DE8E /* WeatherControl.swift */,
 				A1A9E6D92589E1CB003AC634 /* WeatherService.swift */,
+				A1D136E4258EDBD7009FDDBC /* TestWeatherStuff.swift */,
 				A148B36B2570A59D0046DE8E /* CVLayoutFlow.swift */,
 			);
 			path = Weather;
@@ -495,6 +498,7 @@
 				A19BD119258850730037AE85 /* Session.swift in Sources */,
 				A11C36A12584B814006B4DFD /* TestMovingLinesVC.swift in Sources */,
 				A153DE6E2571E66C00D469E0 /* NewsControls.swift in Sources */,
+				A1D136E5258EDBD7009FDDBC /* TestWeatherStuff.swift in Sources */,
 				28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

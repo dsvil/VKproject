@@ -10,30 +10,85 @@ import UIKit
 class FriendsListTVC: UITableViewController, UISearchBarDelegate {
     let avatarView = AvatarView()
     var friends = [ApiGetFriendsVK.VkFriend]()
+//    var sortedFirstLetters = [String]()
+    
     @IBOutlet weak var search: UISearchBar!
+    
+    var firstCharacters = [Character]()
+    var sortedFriends: [Character: [ApiGetFriendsVK.VkFriend]] = [:]
+    
+    private func sort(_ friends: [ApiGetFriendsVK.VkFriend]) -> (characters: [Character], sortedFriends: [Character: [ApiGetFriendsVK.VkFriend]]) {
+        var characters = [Character]()
+        var sortedFriends = [Character: [ApiGetFriendsVK.VkFriend]]()
+        
+        friends.forEach { friend in
+            guard let character = friend.lastName.first else { return }
+            if var thisCharFriends = sortedFriends[character] {
+                thisCharFriends.append(friend)
+                sortedFriends[character] = thisCharFriends
+            } else {
+                sortedFriends[character] = [friend]
+                characters.append(character)
+            }
+        }
+        characters.sort()
+        return (characters, sortedFriends)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         search.delegate = self
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.navigationItem.titleView = avatarView
         ApiGetFriendsVK.getData() { [self] friends in
             self.friends = friends
+            (firstCharacters, sortedFriends) = sort(friends)
             self.tableView.reloadData()
         }
     }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let character = firstCharacters[section]
+        return String(character)
     }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        sortedFriends.count
+    }
+//    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+//        func getStringForFirstLetter () -> [String]{
+//            var chars = [String]()
+//            firstCharacters.forEach {_ in
+//                let char = firstCharacters
+//                let stringChar = String(char)
+//                chars.append(stringChar)
+//            }
+//            let uniqueFirstLetters = Array(Set(chars))
+//            sortedFirstLetters = uniqueFirstLetters.sorted()
+//            return sortedFirstLetters
+//        }
+//        return sortedFirstLetters
+//    }
+    
+        override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 40))
+            view.backgroundColor = UIColor.red
+            let label = UILabel(frame: CGRect(x: 15, y: -10, width: tableView.bounds.width - 30, height: 49))
+            label.font = UIFont.boldSystemFont(ofSize: 20)
+            label.textColor = UIColor.white
+            let character = firstCharacters[section]
+            label.text = String(character)
+            view.addSubview(label)
+            return view
+        }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return friends.count
+        let character = firstCharacters[section]
+        let friendsCount = sortedFriends[character]?.count
+        return friendsCount ?? 0
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsListCell", for: indexPath) as! FriendsListCell
-        let friend = friends[indexPath.row]
+        
         cell.contentView.alpha = 0
         cell.contentView.transform = CGAffineTransform(translationX: -50, y: 0)
         
@@ -44,17 +99,28 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
                             cell.contentView.transform = .identity
                             cell.contentView.alpha = 1
                           })
-        cell.friendList.text = friend.lastName + " " + friend.firstName
-        cell.friendIcon.image = try? UIImage(data: Data(contentsOf: URL(string: friend.icon ) ?? URL(string: "http://www.google.com")!))
         
-        return cell
+        let character = firstCharacters[indexPath.section]
+        if let char = sortedFriends[character] {
+            let friend = char[indexPath.row]
+            cell.friendList.text = friend.lastName + " " + friend.firstName
+            cell.friendIcon.image = try? UIImage(data: Data(contentsOf: URL(string: friend.icon ) ?? URL(string: "http://www.google.com")!))
+            
+            return cell
+        }
+        
+        return UITableViewCell()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OpenImages" {
+            
             if let destination = segue.destination as? FriendsPhotosCVC{
                 if let indexPath = tableView.indexPathForSelectedRow {
-                    destination.friendsId = friends[indexPath.row]
-                    destination.title = friends[indexPath.row].firstName
+                    let character = firstCharacters[indexPath.section]
+                    if let char = sortedFriends[character] {
+                        destination.friendsId = char[indexPath.row].id
+                        destination.title = char[indexPath.row].firstName}
                 }
             }
         }
@@ -62,7 +128,7 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
     
     
 }
-    //    var sortedFirstLetters: [String.Index] = []
+    //    var sortedFirstLetters: [String] = []
     //    var sections: [[VkFriend]] = [[]]
     //    var filteredSections: [[VkFriend]] = [[]]
     //    func createSections () {
