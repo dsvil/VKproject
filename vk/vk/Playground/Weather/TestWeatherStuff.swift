@@ -29,8 +29,8 @@ class TestWeatherStuff: UIViewController {
                 return
             }
             guard let data = data else { return }
-            //            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-            //            print(json as Any)
+//                        let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+//                        print(json as Any)
             let weather = try! JSONDecoder().decode(WeatherResponse.self, from: data)
             completion(weather.list)
         }
@@ -43,6 +43,5 @@ class TestWeatherStuff: UIViewController {
             self?.weather = data
             print(self?.weather as Any)
         }
-
     }
 }
