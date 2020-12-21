@@ -53,30 +53,3 @@ final class ApiGetGroupsVK {
     }
 }
 
-//func getDataUrl(completion: @escaping ([VkGroup]) -> Void ){
-//    let configuration = URLSessionConfiguration.default
-//    let session = URLSession.init(configuration: configuration)
-//    var urlConstructor = URLComponents()
-//
-//    urlConstructor.scheme = "https"
-//    urlConstructor.host = "api.vk.com"
-//    urlConstructor.path = "/method/groups.get"
-//
-//    urlConstructor.queryItems = [
-//        URLQueryItem(name: "user_ids", value: String(Session.instance.userId!)),
-//        URLQueryItem(name: "extended", value: "1"),
-//        URLQueryItem(name: "fields", value: "city,members_count,start_date"),
-//        URLQueryItem(name: "access_token", value: Session.instance.token!),
-//        URLQueryItem(name: "v", value: "5.126")
-//    ]
-//    let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
-//        if let error = error {
-//            print(error)
-//            return
-//        }
-//        guard let data = data else { return }
-//        let groups = try! JSONDecoder().decode(Response.self, from: data)
-//        completion(groups.response.items)
-//    }
-//    task.resume()
-//}

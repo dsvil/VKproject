@@ -10,11 +10,9 @@ import UIKit
 class FriendsListTVC: UITableViewController, UISearchBarDelegate {
     let avatarView = AvatarView()
     var friends = [ApiGetFriendsVK.VkFriend]()
+    var undeletedFriends = [ApiGetFriendsVK.VkFriend]()
     
     @IBOutlet weak var search: UISearchBar!
-    
-//    var firstCharacters = [Character]()
-//    var sortedFriends: [Character: [ApiGetFriendsVK.VkFriend]] = [:]
     
     var charactersBeforeSearch = [Character]()
     var sortedFriendsBeforeSearch : [Character: [ApiGetFriendsVK.VkFriend]] = [:]
@@ -27,13 +25,13 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         search.delegate = self
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
-        self.navigationItem.titleView = avatarView
-        ApiGetFriendsVK.getData() { [self] friends in
+        navigationItem.rightBarButtonItem = editButtonItem
+        navigationItem.titleView = avatarView
+        ApiGetFriendsVK.getData { [self] friends in
             self.friends = friends
             (filteredFirstCharacters, filteredSortedFriends) = sort(friends)
             (charactersBeforeSearch, sortedFriendsBeforeSearch) = sort(friends)
-            self.tableView.reloadData()
+            tableView.reloadData()
         }
     }
 
@@ -45,24 +43,21 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
             view.endEditing(true)
             tableView.reloadData()
         } else {
-            //                (filteredFirstCharacters, filteredSortedFriends) = search(searchText: search.text!, friends)
-            
-            var data = filteredSortedFriends
-            for (key, value) in data {
-                value.forEach { (friend) in
-                    if friend.firstName.lowercased().contains(searchText.lowercased()) ||  friend.lastName.lowercased().contains(searchText.lowercased()){
-                        return
-                    }
-                    else {
-                        data.removeValue(forKey: key)
-                    }
+            var filteredFriends = [ApiGetFriendsVK.VkFriend]()
+            if undeletedFriends.isEmpty {
+                filteredFriends = friends.filter { friend in
+                    friend.firstName.lowercased().contains(searchText.lowercased()) || friend.lastName.lowercased().contains(searchText.lowercased())
                 }
-                filteredSortedFriends = data
-                tableView.reloadData()
+            } else {
+                filteredFriends = undeletedFriends.filter { friend in
+                    friend.firstName.lowercased().contains(searchText.lowercased()) || friend.lastName.lowercased().contains(searchText.lowercased())
+                }
             }
+            (filteredFirstCharacters, filteredSortedFriends) = sort(filteredFriends)
+            tableView.reloadData()
         }
-    }
-    
+
+            }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let character = filteredFirstCharacters[section]
         return String(character)
@@ -125,13 +120,23 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
             if sectionsToDelete?.count == 0 {
                 filteredSortedFriends[character] = nil
                 sortedFriendsBeforeSearch = filteredSortedFriends
-                
                 guard let charToDelete = filteredFirstCharacters.firstIndex(of: character) else { return }
                 filteredFirstCharacters.remove(at:charToDelete)
                 charactersBeforeSearch = filteredFirstCharacters
-                tableView.deleteSections(indexSet, with: .left)
+
+                for character in filteredFirstCharacters {
+                    for element in filteredSortedFriends[character]! {
+                        undeletedFriends.append(element)
+                    }
+                }
+                    tableView.deleteSections(indexSet, with: .left)
             }
             else {
+                for character in filteredFirstCharacters {
+                    for element in filteredSortedFriends[character]! {
+                        undeletedFriends.append(element)
+                    }
+                }
             tableView.deleteRows(at: [indexPath], with: .middle)
             }
         }
@@ -166,22 +171,4 @@ class FriendsListTVC: UITableViewController, UISearchBarDelegate {
         characters.sort()
         return (characters, sortedFriends)
     }
-    
-//    private func search(searchText: String, _ friends: [ApiGetFriendsVK.VkFriend]) -> (characters: [Character], sortedFriends: [Character: [ApiGetFriendsVK.VkFriend]]) {
-//        var characters = [Character]()
-//        var sortedFriends = [Character: [ApiGetFriendsVK.VkFriend]]()
-//        friends.forEach { friend in
-//            guard friend.firstName.lowercased().contains(searchText.lowercased()) ||  friend.lastName.lowercased().contains(searchText.lowercased()) else { return }
-//            guard let character = friend.lastName.first else { return }
-//            if var thisCharFriends = sortedFriends[character] {
-//                thisCharFriends.append(friend)
-//                sortedFriends[character] = thisCharFriends
-//            } else {
-//                sortedFriends[character] = [friend]
-//                characters.append(character)
-//            }
-//        }
-//        characters.sort()
-//        return (characters, sortedFriends)
-//    }
 }

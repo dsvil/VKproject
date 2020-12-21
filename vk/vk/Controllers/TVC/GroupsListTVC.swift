@@ -17,10 +17,10 @@ class GroupsListTVC: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         search.delegate = self
         
-        ApiGetGroupsVK.getData() { [self]groups in
-            self.myGroups = groups
-            self.filteredGroups = groups
-            self.tableView.reloadData()
+        ApiGetGroupsVK.getData { [self]groups in
+            myGroups = groups
+            filteredGroups = groups
+            tableView.reloadData()
         }
     }
     
@@ -32,18 +32,18 @@ class GroupsListTVC: UITableViewController, UISearchBarDelegate {
             tableView.reloadData()
         } else {
             filteredGroups = myGroups.filter({ (group) -> Bool in
-                return group.name.lowercased().contains(searchText.lowercased())
+                group.name.lowercased().contains(searchText.lowercased())
             })
             tableView.reloadData()
         }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredGroups.count
+        filteredGroups.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +70,7 @@ class GroupsListTVC: UITableViewController, UISearchBarDelegate {
                 if let indexPath = groupsSelectionTVC.tableView.indexPathForSelectedRow {
                     let group = groupsSelectionTVC.filteredGroups[indexPath.row]
                     if  !filteredGroups.contains(where: { filteredGroups -> Bool in
-                                                    return group.name ==  filteredGroups.name}) {
+                                                    group.name ==  filteredGroups.name}) {
                         filteredGroups.append(group)
                         myGroups = filteredGroups
                         tableView.reloadData()

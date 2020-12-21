@@ -26,20 +26,20 @@ class GroupsSelectionTVC: UITableViewController, UISearchBarDelegate {
             tableView.reloadData()
         } else {
             ApiGetGroupsVKSearch.getData(searchText: searchText) { [self]groups in
-                self.filteredGroups = groups
-                self.tableView.reloadData()
+                filteredGroups = groups
+                tableView.reloadData()
             }
             tableView.reloadData()
         }
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 1
+        1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return filteredGroups.count
+        filteredGroups.count
     }
     
     
