@@ -14,7 +14,7 @@ class InitialAnimation: UIViewController {
     @IBOutlet weak var view3: CircleView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 6, execute: {
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 3, execute: {
             self.performSegue(withIdentifier: "Next", sender: self)
         })
         UIView.animateKeyframes(withDuration: 6,

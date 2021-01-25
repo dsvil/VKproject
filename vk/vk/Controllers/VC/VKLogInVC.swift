@@ -64,18 +64,6 @@ extension VKLogInVC: WKNavigationDelegate {
         Session.instance.userId = Int(params["user_id"] ?? "0")
         
         decisionHandler(.cancel)
-        let friends = ApiGetFriendsVK()
-        friends.getData(fields: "bdate")
-
-        let groups = ApiGetGroupsVK()
-        groups.getData(fields: "city,members_count,start_date")
-
-        let photos = ApiGetPhotosVK()
-        photos.getData(user: 6548098)
-
-        let search = ApiGetGroupsVKSearch()
-        search.getData(searchText: "ios")
-        
         self.performSegue(withIdentifier: "Start", sender: self)
     }
 }

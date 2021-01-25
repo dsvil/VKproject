@@ -14,8 +14,6 @@
 		2848D66E2560BC8700CB8904 /* GroupsSelectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D66D2560BC8700CB8904 /* GroupsSelectionTVC.swift */; };
 		2848D6712560C0BE00CB8904 /* TestVCwithTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6702560C0BE00CB8904 /* TestVCwithTable.swift */; };
 		2848D6742560C22600CB8904 /* TestCellForVC&T.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6732560C22600CB8904 /* TestCellForVC&T.swift */; };
-		2848D67A2561401800CB8904 /* GetFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6792561401800CB8904 /* GetFriends.swift */; };
-		2848D67E2561407A00CB8904 /* GetGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D67D2561407A00CB8904 /* GetGroups.swift */; };
 		2848D68125624FE700CB8904 /* FriendsPhotosCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D68025624FE700CB8904 /* FriendsPhotosCCell.swift */; };
 		2848D6842562501800CB8904 /* FriendsPhotosCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */; };
 		289B1DA2255ECBC10086815B /* TestDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B1DA1255ECBC10086815B /* TestDraw.swift */; };
@@ -29,6 +27,9 @@
 		28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAEB45255FA88300396CB7 /* Singlton.swift */; };
 		28EAEB4B2560B33B00396CB7 /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */; };
 		28F00BE9255F94D1009C7416 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F00BE8255F94D1009C7416 /* RegistrationVC.swift */; };
+		A102C546258C7E4C00CEBE4D /* SearchVkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102C545258C7E4C00CEBE4D /* SearchVkGroup.swift */; };
+		A102C54B258C89AC00CEBE4D /* VkFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102C54A258C89AC00CEBE4D /* VkFriends.swift */; };
+		A102C54E258C89CA00CEBE4D /* FriendsPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102C54D258C89CA00CEBE4D /* FriendsPhotos.swift */; };
 		A11C369E25844960006B4DFD /* TestIntaractiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11C369D25844960006B4DFD /* TestIntaractiveVC.swift */; };
 		A11C36A12584B814006B4DFD /* TestMovingLinesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11C36A02584B814006B4DFD /* TestMovingLinesVC.swift */; };
 		A134D8DE2580449200EC6351 /* InitialAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134D8DD2580449200EC6351 /* InitialAnimation.swift */; };
@@ -44,7 +45,7 @@
 		A19DB3092570683F007FCEB9 /* SetUpBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19DB3082570683F007FCEB9 /* SetUpBars.swift */; };
 		A1A9E6DA2589E1CB003AC634 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9E6D92589E1CB003AC634 /* WeatherService.swift */; };
 		A1A9E6E32589E663003AC634 /* VKLogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9E6E22589E663003AC634 /* VKLogInVC.swift */; };
-		A1A9E6E6258AC0A8003AC634 /* API VK.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9E6E5258AC0A8003AC634 /* API VK.swift */; };
+		A1A9E6E9258C5129003AC634 /* myVKGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9E6E8258C5129003AC634 /* myVKGroup.swift */; };
 		A1B29CFC2581A36300AA907F /* FullScreenFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B29CFB2581A36300AA907F /* FullScreenFriendVC.swift */; };
 		A1B5A5A9257104C500419142 /* NewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5A5A8257104C500419142 /* NewsTVC.swift */; };
 		A1B5A5AC257108EC00419142 /* GetNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5A5AB257108EC00419142 /* GetNews.swift */; };
@@ -55,6 +56,7 @@
 		A1B8A6762583050200407E48 /* Test3DAnimationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8A6752583050200407E48 /* Test3DAnimationsVC.swift */; };
 		A1C2E75A256E2E8600F044C6 /* CircleShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2E759256E2E8600F044C6 /* CircleShadow.swift */; };
 		A1C2E75F256E79FE00F044C6 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2E75E256E79FE00F044C6 /* LikeControl.swift */; };
+		A1D136E5258EDBD7009FDDBC /* TestWeatherStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D136E4258EDBD7009FDDBC /* TestWeatherStuff.swift */; };
 		A1FDB0832581B5D500B895DB /* ProfoundNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FDB0822581B5D500B895DB /* ProfoundNavigation.swift */; };
 		A1FDB0882581BF9100B895DB /* TestTransformationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FDB0872581BF9100B895DB /* TestTransformationsVC.swift */; };
 		A1FDB08B2581C95100B895DB /* TestRunningCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FDB08A2581C95100B895DB /* TestRunningCloud.swift */; };
@@ -70,8 +72,6 @@
 		2848D66D2560BC8700CB8904 /* GroupsSelectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSelectionTVC.swift; sourceTree = "<group>"; };
 		2848D6702560C0BE00CB8904 /* TestVCwithTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCwithTable.swift; sourceTree = "<group>"; };
 		2848D6732560C22600CB8904 /* TestCellForVC&T.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestCellForVC&T.swift"; sourceTree = "<group>"; };
-		2848D6792561401800CB8904 /* GetFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriends.swift; sourceTree = "<group>"; };
-		2848D67D2561407A00CB8904 /* GetGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroups.swift; sourceTree = "<group>"; };
 		2848D68025624FE700CB8904 /* FriendsPhotosCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotosCCell.swift; sourceTree = "<group>"; };
 		2848D6832562501800CB8904 /* FriendsPhotosCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotosCVC.swift; sourceTree = "<group>"; };
 		289B1DA1255ECBC10086815B /* TestDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDraw.swift; sourceTree = "<group>"; };
@@ -88,6 +88,9 @@
 		28EAEB4A2560B33B00396CB7 /* FriendsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
 		28F00BE8255F94D1009C7416 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		90F8BBDD652B787D25305007 /* Pods_vk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A102C545258C7E4C00CEBE4D /* SearchVkGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVkGroup.swift; sourceTree = "<group>"; };
+		A102C54A258C89AC00CEBE4D /* VkFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkFriends.swift; sourceTree = "<group>"; };
+		A102C54D258C89CA00CEBE4D /* FriendsPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotos.swift; sourceTree = "<group>"; };
 		A11C369D25844960006B4DFD /* TestIntaractiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIntaractiveVC.swift; sourceTree = "<group>"; };
 		A11C36A02584B814006B4DFD /* TestMovingLinesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMovingLinesVC.swift; sourceTree = "<group>"; };
 		A134D8DD2580449200EC6351 /* InitialAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAnimation.swift; sourceTree = "<group>"; };
@@ -103,7 +106,7 @@
 		A19DB3082570683F007FCEB9 /* SetUpBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpBars.swift; sourceTree = "<group>"; };
 		A1A9E6D92589E1CB003AC634 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		A1A9E6E22589E663003AC634 /* VKLogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLogInVC.swift; sourceTree = "<group>"; };
-		A1A9E6E5258AC0A8003AC634 /* API VK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API VK.swift"; sourceTree = "<group>"; };
+		A1A9E6E8258C5129003AC634 /* myVKGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myVKGroup.swift; sourceTree = "<group>"; };
 		A1B29CFB2581A36300AA907F /* FullScreenFriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenFriendVC.swift; sourceTree = "<group>"; };
 		A1B5A5A8257104C500419142 /* NewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTVC.swift; sourceTree = "<group>"; };
 		A1B5A5AB257108EC00419142 /* GetNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNews.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		A1B8A6752583050200407E48 /* Test3DAnimationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3DAnimationsVC.swift; sourceTree = "<group>"; };
 		A1C2E759256E2E8600F044C6 /* CircleShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadow.swift; sourceTree = "<group>"; };
 		A1C2E75E256E79FE00F044C6 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		A1D136E4258EDBD7009FDDBC /* TestWeatherStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWeatherStuff.swift; sourceTree = "<group>"; };
 		A1FDB0822581B5D500B895DB /* ProfoundNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfoundNavigation.swift; sourceTree = "<group>"; };
 		A1FDB0872581BF9100B895DB /* TestTransformationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTransformationsVC.swift; sourceTree = "<group>"; };
 		A1FDB08A2581C95100B895DB /* TestRunningCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRunningCloud.swift; sourceTree = "<group>"; };
@@ -150,10 +154,12 @@
 			isa = PBXGroup;
 			children = (
 				28EAEB45255FA88300396CB7 /* Singlton.swift */,
+				A1A9E6E8258C5129003AC634 /* myVKGroup.swift */,
+				A102C545258C7E4C00CEBE4D /* SearchVkGroup.swift */,
+				A102C54A258C89AC00CEBE4D /* VkFriends.swift */,
+				A102C54D258C89CA00CEBE4D /* FriendsPhotos.swift */,
 				A19BD118258850730037AE85 /* Session.swift */,
 				A1B5A5AB257108EC00419142 /* GetNews.swift */,
-				2848D6792561401800CB8904 /* GetFriends.swift */,
-				2848D67D2561407A00CB8904 /* GetGroups.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,7 +169,6 @@
 			children = (
 				28D62A2F2563FBF600ACF9B5 /* Gradient.swift */,
 				A19DB3082570683F007FCEB9 /* SetUpBars.swift */,
-				A1A9E6E5258AC0A8003AC634 /* API VK.swift */,
 				A177309625760F2D00EA71DC /* NewsCVCCFlowLayout.swift */,
 				A19DB305256FE528007FCEB9 /* AvatarView.swift */,
 				A1C2E75E256E79FE00F044C6 /* LikeControl.swift */,
@@ -270,6 +275,7 @@
 			children = (
 				A148B36E2570A5D80046DE8E /* WeatherControl.swift */,
 				A1A9E6D92589E1CB003AC634 /* WeatherService.swift */,
+				A1D136E4258EDBD7009FDDBC /* TestWeatherStuff.swift */,
 				A148B36B2570A59D0046DE8E /* CVLayoutFlow.swift */,
 			);
 			path = Weather;
@@ -445,9 +451,11 @@
 			files = (
 				A1FDB0832581B5D500B895DB /* ProfoundNavigation.swift in Sources */,
 				2848D6652560B9D600CB8904 /* GroupsListTVC.swift in Sources */,
+				A102C546258C7E4C00CEBE4D /* SearchVkGroup.swift in Sources */,
 				A1B661B62585DD2300A12AF5 /* TransitionStartVC.swift in Sources */,
 				28C4BA50255D5A5E0036DF6B /* LogInScrollViewVC.swift in Sources */,
 				28C4BA4C255D5A5E0036DF6B /* AppDelegate.swift in Sources */,
+				A102C54E258C89CA00CEBE4D /* FriendsPhotos.swift in Sources */,
 				A148B36F2570A5D80046DE8E /* WeatherControl.swift in Sources */,
 				A19DB3092570683F007FCEB9 /* SetUpBars.swift in Sources */,
 				A177309725760F2D00EA71DC /* NewsCVCCFlowLayout.swift in Sources */,
@@ -457,9 +465,8 @@
 				A1B661BF2586F82600A12AF5 /* TransitionSegueAnimated.swift in Sources */,
 				A19DB302256FDE86007FCEB9 /* NewsCell.swift in Sources */,
 				A1A9E6DA2589E1CB003AC634 /* WeatherService.swift in Sources */,
-				A1A9E6E6258AC0A8003AC634 /* API VK.swift in Sources */,
+				A102C54B258C89AC00CEBE4D /* VkFriends.swift in Sources */,
 				A1B661B92585DD4A00A12AF5 /* TransitionEndVC.swift in Sources */,
-				2848D67A2561401800CB8904 /* GetFriends.swift in Sources */,
 				2848D6622560B69500CB8904 /* FriendsListTVC.swift in Sources */,
 				2848D6682560BA2500CB8904 /* GroupsListCell.swift in Sources */,
 				2848D66E2560BC8700CB8904 /* GroupsSelectionTVC.swift in Sources */,
@@ -471,7 +478,6 @@
 				A153DF95257E1B2A001DC9BA /* TestAnimationsVC.swift in Sources */,
 				A1B8A6762583050200407E48 /* Test3DAnimationsVC.swift in Sources */,
 				A1B5A5A9257104C500419142 /* NewsTVC.swift in Sources */,
-				2848D67E2561407A00CB8904 /* GetGroups.swift in Sources */,
 				A19DB306256FE528007FCEB9 /* AvatarView.swift in Sources */,
 				A1A9E6E32589E663003AC634 /* VKLogInVC.swift in Sources */,
 				289B1DA2255ECBC10086815B /* TestDraw.swift in Sources */,
@@ -481,6 +487,7 @@
 				2848D66B2560BC5F00CB8904 /* GroupsSelectionCell.swift in Sources */,
 				2848D6842562501800CB8904 /* FriendsPhotosCVC.swift in Sources */,
 				28D62A302563FBF600ACF9B5 /* Gradient.swift in Sources */,
+				A1A9E6E9258C5129003AC634 /* myVKGroup.swift in Sources */,
 				28EAEB4B2560B33B00396CB7 /* FriendsListCell.swift in Sources */,
 				2848D6742560C22600CB8904 /* TestCellForVC&T.swift in Sources */,
 				A1B29CFC2581A36300AA907F /* FullScreenFriendVC.swift in Sources */,
@@ -491,6 +498,7 @@
 				A19BD119258850730037AE85 /* Session.swift in Sources */,
 				A11C36A12584B814006B4DFD /* TestMovingLinesVC.swift in Sources */,
 				A153DE6E2571E66C00D469E0 /* NewsControls.swift in Sources */,
+				A1D136E5258EDBD7009FDDBC /* TestWeatherStuff.swift in Sources */,
 				28EAEB46255FA88300396CB7 /* Singlton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

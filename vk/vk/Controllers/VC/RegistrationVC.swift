@@ -13,16 +13,23 @@ class RegistrationVC: UIViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWasShown(notification:)),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil)
-        
+            forName: UIResponder.keyboardWillShowNotification,
+            object: nil,
+            queue: .main,
+            using: { notification in
+                let userInfo = (notification as NSNotification).userInfo as! [String: Any]
+                let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+                self.scrollBottom.constant = frame.height
+            })
+
         NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillBeHidden(notification:)),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil)
+            forName: UIResponder.keyboardWillHideNotification,
+            object: nil,
+            queue: .main,
+            using: { notification in
+                self.scrollBottom.constant = 0
+            })
+
         
         let offset = abs(self.logIn.frame.midY -
                             self.pwd.frame.midY)
@@ -81,14 +88,6 @@ class RegistrationVC: UIViewController {
     }
     
     @IBOutlet weak var scrollBottom: NSLayoutConstraint!
-    @objc func keyboardWasShown(notification: Notification) {
-        let userInfo = (notification as NSNotification).userInfo as! [String: Any]
-        let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
-        scrollBottom.constant = frame.height
-    }
-    @objc func keyboardWillBeHidden(notification: Notification) {
-        scrollBottom.constant = 0
-    }
     
     @IBAction func tapScreen(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
